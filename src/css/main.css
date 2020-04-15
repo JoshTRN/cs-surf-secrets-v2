@@ -1,16 +1,16 @@
-// schema
+* {
+  margin: 0;
+  padding: 0;
+  border-style: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* display type */
-
 /* sizing */
-
 /* positioning */
-
 /* box model */
-
 /* colors */
-
 /* fonts/decorations */
-
 .header {
   background: #202020;
 }
@@ -44,3 +44,4 @@
   margin: 4px;
   cursor: pointer;
 }
+/*# sourceMappingURL=main.css.map */
