@@ -44,4 +44,17 @@
   margin: 4px;
   cursor: pointer;
 }
+
+.signup {
+  background: #303030;
+  color: white;
+  text-align: center;
+}
+
+.signup-form {
+  padding: 30px;
+  background: grey;
+  width: 50%;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=main.css.map */
