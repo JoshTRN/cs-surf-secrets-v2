@@ -1,17 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Assets/images/surfsecrets_logo.png";
+import firebase, { fAuth, fDb } from "../config/fbConfig";
 
-function MyHeader() {
-  return (
-    <div className="header">
-      <img className="logo" src={logo}></img>
-      <Link to="/Signup">
-        <button className="button">SIGNUP</button>
-      </Link>
-      <button className="button">LOGIN</button>
-    </div>
-  );
+class MyHeader extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    fAuth.signOut();
+  };
+
+  render() {
+    return (
+      <div className="header">
+        <img className="logo" src={logo}></img>
+        <Link to="/Signup">
+          <button className="button">SIGNUP</button>
+        </Link>
+        <Link to="/Login">
+          <button className="button">LOGIN</button>
+        </Link>
+        <button className="button" onClick={this.handleSubmit}>
+          LOGOUT
+        </button>
+      </div>
+    );
+  }
 }
 
 export default MyHeader;
