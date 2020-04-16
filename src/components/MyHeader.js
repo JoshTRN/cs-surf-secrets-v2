@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Assets/images/surfsecrets_logo.png";
-import firebase, { fAuth, fDb } from "../config/fbConfig";
+import { fAuth } from "../config/fbConfig";
 
 class MyHeader extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class MyHeader extends Component {
   render() {
     return (
       <div className="header">
-        <img className="logo" src={logo}></img>
+        <img className="logo" alt="surf secrets logo" src={logo}></img>
         <Link to="/Signup">
           <button className="button">SIGNUP</button>
         </Link>

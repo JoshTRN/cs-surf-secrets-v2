@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import firebase, { fAuth, fDb } from "../config/fbConfig";
+import { fAuth, fDb } from "../config/fbConfig";
+import Posts from "../components/Posts";
 
 class Home extends Component {
   constructor(props) {
@@ -7,27 +8,42 @@ class Home extends Component {
 
     this.state = {
       loggedIn: false,
+      data: [
+        {
+          title: "titeeel",
+          content: "coneetn",
+        },
+      ],
     };
   }
 
+  componentDidMount() {
+    fDb
+      .collection("posts")
+      .get()
+      .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => doc.data());
+        this.setState({
+          data: this.state.data.concat(data),
+        });
+      });
+  }
+
   authEvent = fAuth.onAuthStateChanged((user) => {
-    if (user) {
-      this.setState({
-        loggedIn: true,
-      });
-    } else {
-      this.setState({
-        loggedIn: false,
-      });
-    }
+    this.setState({
+      loggedIn: user ? true : false,
+    });
   });
 
   render() {
-    if (this.state.loggedIn == true) {
+    if (this.state.loggedIn) {
       return (
         <div>
           {/* Conditional rendering when logged in/not */}
           <h1>Posts</h1>
+          {this.state.data.map(({ title, content }) => (
+            <Posts key={title} title={title} content={content} />
+          ))}
         </div>
       );
     } else {

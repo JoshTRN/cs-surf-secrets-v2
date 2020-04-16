@@ -5,15 +5,11 @@ function MyHeader() {
   return (
     <div className="nav">
       <ul>
-        <li>
-          <Link to="/">
-            <a className="nav-link">HOME</a>
-          </Link>
-        </li>
+        <Link to="/">
+          <li className="nav-link">HOME</li>
+        </Link>
         <Link to="/profile">
-          <li>
-            <a className="nav-link">PROFILE</a>
-          </li>
+          <li className="nav-link">PROFILE</li>
         </Link>
       </ul>
     </div>
