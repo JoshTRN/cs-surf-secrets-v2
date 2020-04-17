@@ -4,17 +4,15 @@ import { Router, RouteComponentProps } from "@reach/router";
 import HomePage from "./pages/Home";
 import SignupPage from "./pages/Signup";
 import ProfilePage from "./pages/Profile";
+import LoginPage from "./pages/Login";
 
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
 
-interface Props {
-  text: string;
-}
-
 let Home = (props: RouteComponentProps) => <HomePage />;
 let Profile = (props: RouteComponentProps) => <ProfilePage />;
 let Signup = (props: RouteComponentProps) => <SignupPage />;
+let Login = (props: RouteComponentProps) => <LoginPage />;
 
 function App() {
   return (
@@ -25,6 +23,7 @@ function App() {
         <Home path="/" />
         <Profile path="Profile" />
         <Signup path="Signup" />
+        <Login path="Login" />
       </Router>
     </div>
   );

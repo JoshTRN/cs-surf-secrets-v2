@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import firebase, { fAuth, fDb } from "../config/fbConfig";
 
-class Signup extends Component<any, any> {
+class LoginPage extends Component<any, any> {
   constructor(props: any) {
     super(props);
 
@@ -29,8 +29,7 @@ class Signup extends Component<any, any> {
     alert(`${this.state.email}${this.state.password}`);
     const email = this.state.email;
     const password = this.state.password;
-    fAuth.createUserWithEmailAndPassword(email, password).then((cred) => {
-      // reset form
+    fAuth.signInWithEmailAndPassword(email, password).then((cred) => {
       this.setState({
         email: "",
         password: "",
@@ -41,7 +40,7 @@ class Signup extends Component<any, any> {
   render() {
     return (
       <div className="signup">
-        <h4>Sign up</h4>
+        <h4>Login</h4>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div>
             <label>Email Address</label>
@@ -62,7 +61,7 @@ class Signup extends Component<any, any> {
             />
           </div>
           <button className="button" type="submit">
-            SIGNUP
+            LOGIN
           </button>
         </form>
       </div>
@@ -70,4 +69,4 @@ class Signup extends Component<any, any> {
   }
 }
 
-export default Signup;
+export default LoginPage;
