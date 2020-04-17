@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import firebase, { fAuth, fDb } from "../config/fbConfig";
+import { fAuth } from "../config/fbConfig";
 
 class LoginPage extends Component<any, any> {
   constructor(props: any) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import firebase, { fAuth, fDb } from "../config/fbConfig";
+import { fAuth } from "../config/fbConfig";
 
 import logo from "../Assets/images/surfsecrets_logo.png";
 
@@ -19,7 +19,7 @@ class MyHeader extends Component<any, any> {
   render() {
     return (
       <div className="header">
-        <img className="logo" src={logo}></img>
+        <img className="logo" alt="Surf Secrets Logo" src={logo}></img>
         <Link to="Signup" className="nav-link">
           SIGNUP
         </Link>

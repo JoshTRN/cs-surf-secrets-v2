@@ -29,20 +29,4 @@ function App() {
   );
 }
 
-/* function App() {
-  return (
-    <Router>
-      <div>
-        <MyHeader />
-        <MyNav />
-        <Switch>
-          <Route path="/Signup" component={Signup} />
-          <Route path="/Profile" component={Profile} />
-          <Route path="/" exact component={Home} />
-        </Switch>
-      </div>
-    </Router>
-  );
-} */
-
 export default App;
