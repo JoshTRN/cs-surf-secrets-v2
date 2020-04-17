@@ -1,12 +1,20 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { Router, RouteComponentProps } from "@reach/router";
 
-import Home from "./pages/Home";
-import Signup from "./pages/Signup";
-import Profile from "./pages/Profile";
+import HomePage from "./pages/Home";
+import SignupPage from "./pages/Signup";
+import ProfilePage from "./pages/Profile";
 
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
+
+interface Props {
+  text: string;
+}
+
+let Home = (props: RouteComponentProps) => <HomePage />;
+let Profile = (props: RouteComponentProps) => <ProfilePage />;
+let Signup = (props: RouteComponentProps) => <SignupPage />;
 
 function App() {
   return (

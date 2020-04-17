@@ -1,16 +1,16 @@
 import React from "react";
 
-function Signup() {
+function SignupPage() {
   return (
     <div className="signup">
       <h4>Sign up</h4>
       <form className="signup-form" id="signup-form">
-        <label for="signup-email">Email Address</label>
+        <label>Email Address</label>
         <br />
         <input className="input" type="email" id="signup-email" required />
 
         <br />
-        <label for="signup-password">Password</label>
+        <label>Password</label>
         <br />
         <input
           className="input"
@@ -26,4 +26,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignupPage;

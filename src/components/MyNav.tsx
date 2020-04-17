@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "@reach/router";
 
-function MyHeader() {
+function MyNav() {
   return (
     <div className="nav">
       <ul>
-        <li>
-          <a className="nav-link">HOME</a>
-        </li>
-        <li>
-          <a className="nav-link">PROFILE</a>
-        </li>
+        <Link to="/" className="nav-link">
+          HOME
+        </Link>
+        <Link to="Profile" className="nav-link">
+          PROFILE
+        </Link>
       </ul>
     </div>
   );
 }
 
-export default MyHeader;
+export default MyNav;
