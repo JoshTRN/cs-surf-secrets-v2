@@ -1,6 +1,6 @@
 import React from "react";
 
-function Posts(props) {
+function Posts(props: any) {
   return (
     <div className="posts">
       <h2>Posts</h2>

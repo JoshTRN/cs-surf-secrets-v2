@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import { fAuth } from "../config/fbConfig";
 
-class Login extends Component {
-  constructor(props) {
+class LoginPage extends Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.state = {
@@ -12,19 +12,19 @@ class Login extends Component {
     };
   }
 
-  handleEmailChange = (event) => {
+  handleEmailChange = (event: any) => {
     this.setState({
       email: event.target.value,
     });
   };
 
-  handlePasswordChange = (event) => {
+  handlePasswordChange = (event: any) => {
     this.setState({
       password: event.target.value,
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = (e: any) => {
     e.preventDefault();
     alert(`${this.state.email}${this.state.password}`);
     const email = this.state.email;
@@ -69,4 +69,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default LoginPage;

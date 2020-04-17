@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import logo from "../Assets/images/surfsecrets_logo.png";
+import { Link } from "@reach/router";
 import { fAuth } from "../config/fbConfig";
 
-class MyHeader extends Component {
-  constructor(props) {
+import logo from "../Assets/images/surfsecrets_logo.png";
+
+class MyHeader extends Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.state = {};
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = (e: any) => {
     e.preventDefault();
     fAuth.signOut();
   };
@@ -18,12 +19,12 @@ class MyHeader extends Component {
   render() {
     return (
       <div className="header">
-        <img className="logo" alt="surf secrets logo" src={logo}></img>
-        <Link to="/Signup">
-          <button className="button">SIGNUP</button>
+        <img className="logo" alt="Surf Secrets Logo" src={logo}></img>
+        <Link to="Signup" className="nav-link">
+          SIGNUP
         </Link>
-        <Link to="/Login">
-          <button className="button">LOGIN</button>
+        <Link to="Login" className="nav-link">
+          LOGIN
         </Link>
         <button className="button" onClick={this.handleSubmit}>
           LOGOUT

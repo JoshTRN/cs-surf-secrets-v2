@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { fAuth, fDb } from "../config/fbConfig";
 import Posts from "../components/Posts";
 
-class Home extends Component {
-  constructor(props) {
+class HomePage extends Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.state = {
@@ -41,7 +41,7 @@ class Home extends Component {
         <div>
           {/* Conditional rendering when logged in/not */}
           <h1>Posts</h1>
-          {this.state.data.map(({ title, content }) => (
+          {this.state.data.map(({ title, content }: any) => (
             <Posts key={title} title={title} content={content} />
           ))}
         </div>
@@ -57,4 +57,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomePage;
