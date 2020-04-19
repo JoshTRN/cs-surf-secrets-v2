@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { fAuth } from "../config/fbConfig";
+import { fAuth, fDb } from "../config/fbConfig";
 
 class Signup extends Component<any, any> {
   constructor(props: any) {
@@ -24,18 +24,35 @@ class Signup extends Component<any, any> {
     });
   };
 
+  handleUsernameChange = (event: any) => {
+    this.setState({
+      username: event.target.value,
+    });
+  };
+
   handleSubmit = (e: any) => {
     e.preventDefault();
-    alert(`${this.state.email}${this.state.password}`);
+    alert(
+      `Email: ${this.state.email} Password: ${this.state.password} Username: ${this.state.username}`
+    );
     const email = this.state.email;
     const password = this.state.password;
-    fAuth.createUserWithEmailAndPassword(email, password).then((cred) => {
-      // reset form
-      this.setState({
-        email: "",
-        password: "",
+    const username = this.state.username;
+    fAuth
+      .createUserWithEmailAndPassword(email, password)
+      .then((cred) => {
+        return fDb.collection("users").doc(cred?.user?.uid).set({
+          username: username,
+        });
+      })
+      .then(() => {
+        // reset form
+        this.setState({
+          username: "",
+          email: "",
+          password: "",
+        });
       });
-    });
   };
 
   render() {
@@ -59,6 +76,15 @@ class Signup extends Component<any, any> {
               type="password"
               value={this.state.password}
               onChange={this.handlePasswordChange}
+            />
+          </div>
+          <div>
+            <label>Username</label>
+            <input
+              className="input"
+              type="text"
+              value={this.state.username}
+              onChange={this.handleUsernameChange}
             />
           </div>
           <button className="button" type="submit">
