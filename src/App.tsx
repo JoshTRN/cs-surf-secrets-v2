@@ -5,6 +5,7 @@ import HomePage from "./pages/Home";
 import SignupPage from "./pages/Signup";
 import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
+import { List } from './components/List';
 
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
@@ -26,24 +27,7 @@ function App() {
         <Login path="Login" />
       </Router>
       <br />
-      <li>profile builder</li>
-      <li>confirm password</li>
-      <li>create posts</li>
-      <li>view other posts</li>
-      <li>comment on posts</li>
-      <li>Redesign</li>
-      <li>Reset Password</li>
-      <li>todolists + completed</li>
-      <li>saveloc loader</li>
-      <li>ksf api</li>
-      <li>like posts</li>
-      <li>notifications</li>
-      <li>Achievements + Friend Feed</li>
-      <li>Twitch API</li>
-      <li>Friending System</li>
-      <li>Match Finder</li>
-      <li>Profile Views</li>
-      <li>Profile Comments</li>
+	  <List />
     </div>
   );
 }
