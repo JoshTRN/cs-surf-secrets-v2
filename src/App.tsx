@@ -10,10 +10,10 @@ import { List } from './components/List';
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
 
-let Home = (props: RouteComponentProps) => <HomePage />;
-let Profile = (props: RouteComponentProps) => <ProfilePage />;
-let Signup = (props: RouteComponentProps) => <SignupPage />;
-let Login = (props: RouteComponentProps) => <LoginPage />;
+const Home = (props: RouteComponentProps) => <HomePage />;
+const Profile = (props: RouteComponentProps) => <ProfilePage />;
+const Signup = (props: RouteComponentProps) => <SignupPage />;
+const Login = (props: RouteComponentProps) => <LoginPage />;
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
       <MyNav />
       <Router>
         <Home path="/" />
-        <Profile path="Profile" />
-        <Signup path="Signup" />
-        <Login path="Login" />
+        <Profile path="profile" />
+        <Signup path="signup" />
+        <Login path="login" />
       </Router>
       <br />
 	  <List />
