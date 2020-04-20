@@ -8,7 +8,7 @@ function MyNav() {
         <Link to="/" className="nav-link">
           HOME
         </Link>
-        <Link to="Profile" className="nav-link">
+        <Link to="profile" className="nav-link">
           PROFILE
         </Link>
       </ul>

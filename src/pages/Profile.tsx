@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { fAuth, fDb } from "../config/fbConfig";
 
+const logo = require("./moon.PNG");
+
 class ProfilePage extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -8,6 +10,20 @@ class ProfilePage extends Component<any, any> {
     this.state = {
       loggedIn: false,
     };
+  }
+
+  fDbCall() {
+    fDb
+      .collection("users")
+      .get()
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          this.setState({
+            username: data.username,
+          });
+        });
+      });
   }
 
   componentDidMount() {
@@ -30,6 +46,7 @@ class ProfilePage extends Component<any, any> {
   }
 
   authEvent = fAuth.onAuthStateChanged((user) => {
+    this.fDbCall();
     this.setState({
       loggedIn: user ? true : false,
     });
@@ -43,7 +60,12 @@ class ProfilePage extends Component<any, any> {
       return (
         <div>
           {/* Conditional rendering when logged in/not */}
-          <h1>Logged in as {this.state.username}</h1>
+          <img src={logo} alt="logo" className="logo" />
+          <h1>{this.state.username}</h1>
+          <h4>Member Since</h4>
+          <h6>20 April 2020</h6>
+          <h4>Profile Views</h4>
+          <h6>238</h6>
         </div>
       );
     } else {

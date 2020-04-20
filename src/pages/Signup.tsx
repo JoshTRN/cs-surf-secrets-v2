@@ -2,6 +2,21 @@ import React, { Component } from "react";
 
 import { fAuth, fDb } from "../config/fbConfig";
 
+const monthNames = [
+  "JAN",
+  "FEB",
+  "MAR",
+  "APR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AUG",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DEC",
+];
+
 class Signup extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -41,9 +56,16 @@ class Signup extends Component<any, any> {
     fAuth
       .createUserWithEmailAndPassword(email, password)
       .then((cred) => {
-        return fDb.collection("users").doc(cred?.user?.uid).set({
-          username: username,
-        });
+        let d8 = new Date();
+        return fDb
+          .collection("users")
+          .doc(cred?.user?.uid)
+          .set({
+            username: username,
+            memberSince: `${d8.getDate()} ${
+              monthNames[d8.getMonth()]
+            } ${d8.getFullYear()}`,
+          });
       })
       .then(() => {
         // reset form

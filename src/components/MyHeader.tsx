@@ -20,10 +20,10 @@ class MyHeader extends Component<any, any> {
     return (
       <div className="header">
         <img className="logo" alt="Surf Secrets Logo" src={logo}></img>
-        <Link to="Signup" className="nav-link">
+        <Link to="signup" className="nav-link">
           SIGNUP
         </Link>
-        <Link to="Login" className="nav-link">
+        <Link to="login" className="nav-link">
           LOGIN
         </Link>
         <button className="button" onClick={this.handleSubmit}>
