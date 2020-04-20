@@ -3,7 +3,7 @@ import "firebase/firestore";
 import "firebase/auth";
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyD1WqTClHQyNADcUhLy2rU8a0hseSty4pE",
   authDomain: "cs-surf-secrets.firebaseapp.com",
   databaseURL: "https://cs-surf-secrets.firebaseio.com",
@@ -15,7 +15,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.firestore().settings({ timestampsInSnapshots: true });
 
 export const fAuth = firebase.auth();
 export const fDb = firebase.firestore();

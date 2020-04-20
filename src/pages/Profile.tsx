@@ -12,20 +12,6 @@ class ProfilePage extends Component<any, any> {
     };
   }
 
-  fDbCall() {
-    fDb
-      .collection("users")
-      .get()
-      .then((snapshot) => {
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          this.setState({
-            username: data.username,
-          });
-        });
-      });
-  }
-
   componentDidMount() {
     fDb
       .collection("users")
@@ -46,7 +32,6 @@ class ProfilePage extends Component<any, any> {
   }
 
   authEvent = fAuth.onAuthStateChanged((user) => {
-    this.fDbCall();
     this.setState({
       loggedIn: user ? true : false,
     });

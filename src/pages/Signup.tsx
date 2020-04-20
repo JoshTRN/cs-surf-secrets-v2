@@ -27,6 +27,8 @@ class Signup extends Component<any, any> {
     };
   }
 
+  // 5:30:00 - combine these event handlers
+
   handleEmailChange = (event: any) => {
     this.setState({
       email: event.target.value,
