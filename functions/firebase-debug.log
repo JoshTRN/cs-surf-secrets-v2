@@ -1,143 +1,398 @@
-[debug] [2020-05-01T04:03:47.882Z] ----------------------------------------------------------------------
-[debug] [2020-05-01T04:03:47.884Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\David\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2020-05-01T04:03:47.885Z] CLI Version:   8.2.0
-[debug] [2020-05-01T04:03:47.885Z] Platform:      win32
-[debug] [2020-05-01T04:03:47.885Z] Node Version:  v12.16.1
-[debug] [2020-05-01T04:03:47.886Z] Time:          Fri May 01 2020 05:03:47 GMT+0100 (British Summer Time)
-[debug] [2020-05-01T04:03:47.886Z] ----------------------------------------------------------------------
-[debug] [2020-05-01T04:03:47.887Z] 
-[debug] [2020-05-01T04:03:47.898Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-05-01T04:03:47.899Z] > authorizing via signed-in user
-[debug] [2020-05-01T04:03:47.899Z] [iam] checking project cs-surf-secrets for permissions ["firebase.projects.get"]
-[debug] [2020-05-01T04:03:47.904Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-05-01T04:03:47.906Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-05-01T04:03:48.216Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 04:03:47 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-05-01T04:03:48.225Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-surf-secrets:testIamPermissions  
+[debug] [2020-05-02T06:19:39.587Z] ----------------------------------------------------------------------
+[debug] [2020-05-02T06:19:39.589Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\David\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-02T06:19:39.589Z] CLI Version:   8.2.0
+[debug] [2020-05-02T06:19:39.589Z] Platform:      win32
+[debug] [2020-05-02T06:19:39.589Z] Node Version:  v12.16.1
+[debug] [2020-05-02T06:19:39.590Z] Time:          Sat May 02 2020 07:19:39 GMT+0100 (British Summer Time)
+[debug] [2020-05-02T06:19:39.590Z] ----------------------------------------------------------------------
+[debug] [2020-05-02T06:19:39.590Z] 
+[debug] [2020-05-02T06:19:39.598Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-02T06:19:39.598Z] > authorizing via signed-in user
+[debug] [2020-05-02T06:19:39.598Z] [iam] checking project cs-surf-secrets for permissions ["firebase.projects.get"]
+[debug] [2020-05-02T06:19:39.601Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cs-surf-secrets:testIamPermissions  
  {"permissions":["firebase.projects.get"]}
-[debug] [2020-05-01T04:03:49.111Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 04:03:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=638","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-05-01T04:03:49.112Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cs-surf-secrets  
+[debug] [2020-05-02T06:19:41.408Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 02 May 2020 06:19:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=654","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-02T06:19:41.410Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cs-surf-secrets  
  
-[debug] [2020-05-01T04:03:49.538Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 May 2020 04:03:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-02T06:19:41.843Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 02 May 2020 06:19:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] 
 [info] === Serving from 'C:\Users\David\Desktop\Coding\Work\cs-surf-secrets'...
 [info] 
 [warn] !  Your requested "node" version "8" doesn't match your global version "12"
 [info] +  functions: functions emulator started at http://localhost:5000
 [info] i  functions: Watching "C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions" for Cloud Functions...
-[debug] [2020-05-01T04:03:51.567Z] [worker-pool] addWorker(~diagnostic~) 
-[debug] [2020-05-01T04:03:51.568Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
-[debug] [2020-05-01T04:03:51.568Z] [worker-pool] submitWork(triggerId=) 
-[debug] [2020-05-01T04:03:51.569Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\9092 
-[debug] [2020-05-01T04:03:51.569Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: BUSY 
-[debug] [2020-05-01T04:03:51.936Z] [runtime-status] [9092] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
-[debug] [2020-05-01T04:03:51.938Z] [runtime-status] [9092] Disabled runtime features: undefined 
-[debug] [2020-05-01T04:03:51.943Z] [runtime-status] [9092] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:51.945Z] [runtime-status] [9092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:51.946Z] [runtime-status] [9092] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-05-01T04:03:51.981Z] [runtime-status] [9092] Checked functions.config() {"config":{}} 
-[debug] [2020-05-01T04:03:51.982Z] [runtime-status] [9092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:51.983Z] [runtime-status] [9092] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:51.983Z] [runtime-status] [9092] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:51.984Z] [runtime-status] [9092] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-05-01T04:03:52.079Z] [runtime-status] [9092] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[debug] [2020-05-02T06:19:43.872Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:19:43.872Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-02T06:19:43.872Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:19:43.873Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\616 
+[debug] [2020-05-02T06:19:43.873Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: BUSY 
+[debug] [2020-05-02T06:19:44.213Z] [runtime-status] [616] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:19:44.215Z] [runtime-status] [616] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:19:44.220Z] [runtime-status] [616] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:19:44.222Z] [runtime-status] [616] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:19:44.223Z] [runtime-status] [616] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:19:44.259Z] [runtime-status] [616] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:19:44.260Z] [runtime-status] [616] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:19:44.261Z] [runtime-status] [616] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:19:44.261Z] [runtime-status] [616] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:19:44.261Z] [runtime-status] [616] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:19:44.359Z] [runtime-status] [616] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
 [info] +  functions[api]: http function initialized (http://localhost:5000/cs-surf-secrets/europe-west1/api).
-[debug] [2020-05-01T04:03:52.464Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: IDLE 
-[debug] [2020-05-01T04:03:57.283Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-05-01T04:03:57.283Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-05-01T04:03:57.283Z] Accepted request POST /cs-surf-secrets/us-central1/api/signup --> api
-[debug] [2020-05-01T04:03:57.286Z] [worker-pool] addWorker(api) 
-[debug] [2020-05-01T04:03:57.287Z] [worker-pool] Adding worker with key api, total=1 
-[debug] [2020-05-01T04:03:57.287Z] [worker-pool] submitWork(triggerId=api) 
-[debug] [2020-05-01T04:03:57.287Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13344 
-[debug] [2020-05-01T04:03:57.287Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: BUSY 
-[debug] [2020-05-01T04:03:57.738Z] [runtime-status] [13344] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
-[debug] [2020-05-01T04:03:57.741Z] [runtime-status] [13344] Disabled runtime features: undefined 
-[debug] [2020-05-01T04:03:57.749Z] [runtime-status] [13344] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:57.751Z] [runtime-status] [13344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:57.753Z] [runtime-status] [13344] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-05-01T04:03:57.798Z] [runtime-status] [13344] Checked functions.config() {"config":{}} 
-[debug] [2020-05-01T04:03:57.799Z] [runtime-status] [13344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:57.800Z] [runtime-status] [13344] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:57.800Z] [runtime-status] [13344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:03:57.801Z] [runtime-status] [13344] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-05-01T04:03:57.920Z] [runtime-status] [13344] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[debug] [2020-05-02T06:19:44.772Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: IDLE 
+[debug] [2020-05-02T06:20:10.596Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\index.js changed, reloading triggers 
+[debug] [2020-05-02T06:20:11.597Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T06:20:11.597Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: FINISHING 
+[debug] [2020-05-02T06:20:11.601Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:20:11.601Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T06:20:11.601Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:20:11.602Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\5048 
+[debug] [2020-05-02T06:20:11.602Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: BUSY 
+[debug] [2020-05-02T06:20:11.620Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: exited 
+[debug] [2020-05-02T06:20:11.620Z] [worker-~diagnostic~-1471ac31-cb8a-4217-aebb-3480289ec172]: FINISHED 
+[debug] [2020-05-02T06:20:12.032Z] [runtime-status] [5048] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:20:12.035Z] [runtime-status] [5048] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:20:12.045Z] [runtime-status] [5048] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:12.048Z] [runtime-status] [5048] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:12.051Z] [runtime-status] [5048] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:20:12.101Z] [runtime-status] [5048] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:20:12.101Z] [runtime-status] [5048] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:12.102Z] [runtime-status] [5048] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:12.103Z] [runtime-status] [5048] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:12.103Z] [runtime-status] [5048] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:20:12.217Z] [runtime-status] [5048] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-05-01T04:03:58.412Z] [runtime-status] [13344] Trigger "api" has been found, beginning invocation! 
+[debug] [2020-05-02T06:20:12.629Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: IDLE 
+[debug] [2020-05-02T06:20:16.351Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T06:20:16.351Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T06:20:16.352Z] Accepted request POST /cs-surf-secrets/europe-west1/api/user/image --> api
+[debug] [2020-05-02T06:20:16.352Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T06:20:16.357Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-02T06:20:16.357Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-02T06:20:16.357Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-02T06:20:16.357Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\1508 
+[debug] [2020-05-02T06:20:16.357Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: BUSY 
+[debug] [2020-05-02T06:20:16.761Z] [runtime-status] [1508] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:20:16.764Z] [runtime-status] [1508] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:20:16.771Z] [runtime-status] [1508] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:16.773Z] [runtime-status] [1508] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:16.777Z] [runtime-status] [1508] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:20:16.823Z] [runtime-status] [1508] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:20:16.825Z] [runtime-status] [1508] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:16.827Z] [runtime-status] [1508] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:16.828Z] [runtime-status] [1508] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:20:16.828Z] [runtime-status] [1508] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:20:16.957Z] [runtime-status] [1508] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:20:17.461Z] [runtime-status] [1508] Trigger "api" has been found, beginning invocation! 
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-05-01T04:03:58.413Z] [runtime-status] [13344] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
-[debug] [2020-05-01T04:03:58.414Z] [runtime-status] [13344] Running api in mode HTTPS 
-[debug] [2020-05-01T04:03:58.416Z] [runtime-status] [13344] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13344 
-[debug] [2020-05-01T04:03:58.420Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-05-01T04:03:58.450Z] [runtime-status] [13344] Ephemeral server handling POST request 
-[debug] [2020-05-01T04:03:58.453Z] [runtime-status] [13344] Ephemeral server survived. 
+[debug] [2020-05-02T06:20:17.462Z] [runtime-status] [1508] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-02T06:20:17.462Z] [runtime-status] [1508] Running api in mode HTTPS 
+[debug] [2020-05-02T06:20:17.464Z] [runtime-status] [1508] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\1508 
+[debug] [2020-05-02T06:20:17.468Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T06:20:17.490Z] [runtime-status] [1508] Ephemeral server handling POST request 
+[debug] [2020-05-02T06:20:17.565Z] [runtime-status] [1508] Ephemeral server survived. 
+[info] >  { {"user":"{"}
+[info] >    iss: 'https://securetoken.google.com/cs-surf-secrets', {"user":"  iss: 'https://securetoken.google.com/cs-surf-secrets',"}
+[info] >    aud: 'cs-surf-secrets', {"user":"  aud: 'cs-surf-secrets',"}
+[info] >    auth_time: 1588399956, {"user":"  auth_time: 1588399956,"}
+[info] >    user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    iat: 1588399956, {"user":"  iat: 1588399956,"}
+[info] >    exp: 1588403556, {"user":"  exp: 1588403556,"}
+[info] >    email: 'new@may3.com', {"user":"  email: 'new@may3.com',"}
+[info] >    email_verified: false, {"user":"  email_verified: false,"}
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' }, {"user":"  firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },"}
+[info] >    uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1' {"user":"  uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1'"}
+[info] >  } {"user":"}"}
 [warn] !  Google API requested!
    - URL: "https://oauth2.googleapis.com/token"
    - Be careful, this may be a production service.
-[info] i  functions: Finished "api" in ~2s
-[debug] [2020-05-01T04:04:00.429Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: IDLE 
-[debug] [2020-05-01T04:04:00.429Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-05-01T04:04:48.036Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\index.js changed, reloading triggers 
-[debug] [2020-05-01T04:04:49.038Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
-[debug] [2020-05-01T04:04:49.038Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: FINISHING 
-[debug] [2020-05-01T04:04:49.038Z] [worker-pool] Shutting down IDLE worker (api) 
-[debug] [2020-05-01T04:04:49.038Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: FINISHING 
-[debug] [2020-05-01T04:04:49.044Z] [worker-pool] addWorker(~diagnostic~) 
-[debug] [2020-05-01T04:04:49.044Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
-[debug] [2020-05-01T04:04:49.044Z] [worker-pool] submitWork(triggerId=) 
-[debug] [2020-05-01T04:04:49.045Z] [worker-~diagnostic~-d3ddfb3d-64af-4fc6-bf68-28011e56130e]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13824 
-[debug] [2020-05-01T04:04:49.045Z] [worker-~diagnostic~-d3ddfb3d-64af-4fc6-bf68-28011e56130e]: BUSY 
-[debug] [2020-05-01T04:04:49.057Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: exited 
-[debug] [2020-05-01T04:04:49.058Z] [worker-api-c3ab0928-ee2f-4ef0-a077-45623132270a]: FINISHED 
-[debug] [2020-05-01T04:04:49.059Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: exited 
-[debug] [2020-05-01T04:04:49.060Z] [worker-~diagnostic~-0530c869-f60c-4ae5-9f24-fb1475fe1fc1]: FINISHED 
-[debug] [2020-05-01T04:04:49.826Z] [runtime-status] [13824] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
-[debug] [2020-05-01T04:04:49.833Z] [runtime-status] [13824] Disabled runtime features: undefined 
-[debug] [2020-05-01T04:04:49.838Z] [runtime-status] [13824] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:04:49.843Z] [runtime-status] [13824] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:04:49.846Z] [runtime-status] [13824] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-05-01T04:04:49.892Z] [runtime-status] [13824] Checked functions.config() {"config":{}} 
-[debug] [2020-05-01T04:04:49.893Z] [runtime-status] [13824] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:04:49.894Z] [runtime-status] [13824] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:04:49.895Z] [runtime-status] [13824] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:04:49.895Z] [runtime-status] [13824] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-05-01T04:04:50.082Z] [runtime-status] [13824] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[info] >  image {"user":"image"}
+[info] >  moon.PNG {"user":"moon.PNG"}
+[info] >  image/png {"user":"image/png"}
+[info] >  TypeError: os.tempdir is not a function {"user":"TypeError: os.tempdir is not a function"}
+[info] >      at Busboy.<anonymous> (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\handlers\users.js:116:35) {"user":"    at Busboy.<anonymous> (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\handlers\\users.js:116:35)"}
+[info] >      at Busboy.emit (events.js:311:20) {"user":"    at Busboy.emit (events.js:311:20)"}
+[info] >      at Busboy.emit (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\node_modules\busboy\lib\main.js:37:33) {"user":"    at Busboy.emit (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\busboy\\lib\\main.js:37:33)"}
+[info] >      at PartStream.<anonymous> (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\node_modules\busboy\lib\types\multipart.js:214:13) {"user":"    at PartStream.<anonymous> (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\busboy\\lib\\types\\multipart.js:214:13)"}
+[info] >      at PartStream.emit (events.js:311:20) {"user":"    at PartStream.emit (events.js:311:20)"}
+[info] >      at HeaderParser.<anonymous> (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\node_modules\dicer\lib\Dicer.js:50:16) {"user":"    at HeaderParser.<anonymous> (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\dicer\\lib\\Dicer.js:50:16)"}
+[info] >      at HeaderParser.emit (events.js:311:20) {"user":"    at HeaderParser.emit (events.js:311:20)"}
+[info] >      at HeaderParser._finish (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\node_modules\dicer\lib\HeaderParser.js:68:8) {"user":"    at HeaderParser._finish (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\dicer\\lib\\HeaderParser.js:68:8)"}
+[info] >      at SBMH.<anonymous> (C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\node_modules\dicer\lib\HeaderParser.js:40:12) {"user":"    at SBMH.<anonymous> (C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\dicer\\lib\\HeaderParser.js:40:12)"}
+[info] >      at SBMH.emit (events.js:311:20) {"user":"    at SBMH.emit (events.js:311:20)"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-02T06:20:19.063Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: IDLE 
+[debug] [2020-05-02T06:20:19.063Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-02T06:21:22.350Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\handlers\users.js changed, reloading triggers 
+[debug] [2020-05-02T06:21:23.352Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T06:21:23.352Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: FINISHING 
+[debug] [2020-05-02T06:21:23.352Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-05-02T06:21:23.352Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: FINISHING 
+[debug] [2020-05-02T06:21:23.358Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:21:23.359Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T06:21:23.359Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:21:23.359Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13216 
+[debug] [2020-05-02T06:21:23.359Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: BUSY 
+[debug] [2020-05-02T06:21:23.368Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: exited 
+[debug] [2020-05-02T06:21:23.368Z] [worker-~diagnostic~-ce9bc103-cc5b-4d2d-b32b-5470effe33ef]: FINISHED 
+[debug] [2020-05-02T06:21:23.369Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: exited 
+[debug] [2020-05-02T06:21:23.369Z] [worker-api-eed7ac9d-177d-4420-8aa0-78ef9e95ce50]: FINISHED 
+[debug] [2020-05-02T06:21:23.978Z] [runtime-status] [13216] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:21:23.981Z] [runtime-status] [13216] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:21:23.986Z] [runtime-status] [13216] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:23.988Z] [runtime-status] [13216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:23.989Z] [runtime-status] [13216] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:21:24.029Z] [runtime-status] [13216] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:21:24.030Z] [runtime-status] [13216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:24.031Z] [runtime-status] [13216] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:24.031Z] [runtime-status] [13216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:24.031Z] [runtime-status] [13216] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:21:24.157Z] [runtime-status] [13216] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-05-01T04:04:50.779Z] [worker-~diagnostic~-d3ddfb3d-64af-4fc6-bf68-28011e56130e]: IDLE 
-[debug] [2020-05-01T04:05:09.896Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-05-01T04:05:09.896Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-05-01T04:05:09.896Z] Accepted request POST /cs-surf-secrets/us-central1/api/signup --> api
-[debug] [2020-05-01T04:05:09.896Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
-[debug] [2020-05-01T04:05:09.896Z] [worker-pool] Cleaned up workers for api: 1 --> 0 
-[debug] [2020-05-01T04:05:09.900Z] [worker-pool] addWorker(api) 
-[debug] [2020-05-01T04:05:09.901Z] [worker-pool] Adding worker with key api, total=1 
-[debug] [2020-05-01T04:05:09.901Z] [worker-pool] submitWork(triggerId=api) 
-[debug] [2020-05-01T04:05:09.901Z] [worker-api-08fe5e6d-4453-40fd-88fa-db8be42f5d78]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13932 
-[debug] [2020-05-01T04:05:09.901Z] [worker-api-08fe5e6d-4453-40fd-88fa-db8be42f5d78]: BUSY 
-[debug] [2020-05-01T04:05:10.316Z] [runtime-status] [13932] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
-[debug] [2020-05-01T04:05:10.318Z] [runtime-status] [13932] Disabled runtime features: undefined 
-[debug] [2020-05-01T04:05:10.327Z] [runtime-status] [13932] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:05:10.328Z] [runtime-status] [13932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:05:10.331Z] [runtime-status] [13932] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-05-01T04:05:10.378Z] [runtime-status] [13932] Checked functions.config() {"config":{}} 
-[debug] [2020-05-01T04:05:10.378Z] [runtime-status] [13932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:05:10.379Z] [runtime-status] [13932] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-05-01T04:05:10.380Z] [runtime-status] [13932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-05-01T04:05:10.380Z] [runtime-status] [13932] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-05-01T04:05:10.505Z] [runtime-status] [13932] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[debug] [2020-05-02T06:21:24.663Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: IDLE 
+[debug] [2020-05-02T06:21:25.049Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T06:21:25.049Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T06:21:25.049Z] Accepted request POST /cs-surf-secrets/europe-west1/api/user/image --> api
+[debug] [2020-05-02T06:21:25.049Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T06:21:25.050Z] [worker-pool] Cleaned up workers for api: 1 --> 0 
+[debug] [2020-05-02T06:21:25.054Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-02T06:21:25.055Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-02T06:21:25.055Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-02T06:21:25.055Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\156 
+[debug] [2020-05-02T06:21:25.055Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: BUSY 
+[debug] [2020-05-02T06:21:25.467Z] [runtime-status] [156] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:21:25.470Z] [runtime-status] [156] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:21:25.476Z] [runtime-status] [156] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:25.480Z] [runtime-status] [156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:25.482Z] [runtime-status] [156] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:21:25.529Z] [runtime-status] [156] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:21:25.530Z] [runtime-status] [156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:25.532Z] [runtime-status] [156] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:25.532Z] [runtime-status] [156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:21:25.533Z] [runtime-status] [156] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:21:25.651Z] [runtime-status] [156] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-05-01T04:05:11.055Z] [runtime-status] [13932] Trigger "api" has been found, beginning invocation! 
+[debug] [2020-05-02T06:21:26.131Z] [runtime-status] [156] Trigger "api" has been found, beginning invocation! 
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-05-01T04:05:11.059Z] [runtime-status] [13932] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
-[debug] [2020-05-01T04:05:11.059Z] [runtime-status] [13932] Running api in mode HTTPS 
-[debug] [2020-05-01T04:05:11.060Z] [runtime-status] [13932] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13932 
-[debug] [2020-05-01T04:05:11.064Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-05-01T04:05:11.109Z] [runtime-status] [13932] Ephemeral server handling POST request 
-[debug] [2020-05-01T04:05:11.113Z] [runtime-status] [13932] Ephemeral server survived. 
+[debug] [2020-05-02T06:21:26.132Z] [runtime-status] [156] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-02T06:21:26.132Z] [runtime-status] [156] Running api in mode HTTPS 
+[debug] [2020-05-02T06:21:26.135Z] [runtime-status] [156] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\156 
+[debug] [2020-05-02T06:21:26.138Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T06:21:26.159Z] [runtime-status] [156] Ephemeral server handling POST request 
+[debug] [2020-05-02T06:21:26.218Z] [runtime-status] [156] Ephemeral server survived. 
+[info] >  { {"user":"{"}
+[info] >    iss: 'https://securetoken.google.com/cs-surf-secrets', {"user":"  iss: 'https://securetoken.google.com/cs-surf-secrets',"}
+[info] >    aud: 'cs-surf-secrets', {"user":"  aud: 'cs-surf-secrets',"}
+[info] >    auth_time: 1588399956, {"user":"  auth_time: 1588399956,"}
+[info] >    user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    iat: 1588399956, {"user":"  iat: 1588399956,"}
+[info] >    exp: 1588403556, {"user":"  exp: 1588403556,"}
+[info] >    email: 'new@may3.com', {"user":"  email: 'new@may3.com',"}
+[info] >    email_verified: false, {"user":"  email_verified: false,"}
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' }, {"user":"  firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },"}
+[info] >    uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1' {"user":"  uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1'"}
+[info] >  } {"user":"}"}
 [warn] !  Google API requested!
    - URL: "https://oauth2.googleapis.com/token"
    - Be careful, this may be a production service.
-[info] i  functions: Finished "api" in ~2s
-[debug] [2020-05-01T04:05:13.551Z] [worker-api-08fe5e6d-4453-40fd-88fa-db8be42f5d78]: IDLE 
-[debug] [2020-05-01T04:05:13.551Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  image {"user":"image"}
+[info] >  moon.PNG {"user":"moon.PNG"}
+[info] >  image/png {"user":"image/png"}
+[warn] !  Google API requested!
+   - URL: "https://storage.googleapis.com/upload/storage/v1/b/cs-surf-secrets.appspot.com/o?uploadType=multipart&name=2066918.PNG"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~9s
+[debug] [2020-05-02T06:21:35.659Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: IDLE 
+[debug] [2020-05-02T06:21:35.660Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-02T06:23:13.003Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\handlers\users.js changed, reloading triggers 
+[debug] [2020-05-02T06:23:14.005Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T06:23:14.005Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: FINISHING 
+[debug] [2020-05-02T06:23:14.005Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-05-02T06:23:14.005Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: FINISHING 
+[debug] [2020-05-02T06:23:14.011Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:23:14.011Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T06:23:14.011Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:23:14.011Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\14140 
+[debug] [2020-05-02T06:23:14.012Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: BUSY 
+[debug] [2020-05-02T06:23:14.025Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: exited 
+[debug] [2020-05-02T06:23:14.025Z] [worker-~diagnostic~-58fa9bb6-1cd3-4621-934f-45915490af3c]: FINISHED 
+[debug] [2020-05-02T06:23:14.033Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: exited 
+[debug] [2020-05-02T06:23:14.033Z] [worker-api-6a5073d3-b551-454b-afe0-79fb13c1095f]: FINISHED 
+[debug] [2020-05-02T06:23:14.696Z] [runtime-status] [14140] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:23:14.698Z] [runtime-status] [14140] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:23:14.704Z] [runtime-status] [14140] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:14.705Z] [runtime-status] [14140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:14.707Z] [runtime-status] [14140] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:23:14.748Z] [runtime-status] [14140] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:23:14.749Z] [runtime-status] [14140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:14.751Z] [runtime-status] [14140] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:14.751Z] [runtime-status] [14140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:14.752Z] [runtime-status] [14140] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:23:14.873Z] [runtime-status] [14140] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:23:15.327Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: IDLE 
+[debug] [2020-05-02T06:23:24.023Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T06:23:24.024Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T06:23:24.024Z] Accepted request POST /cs-surf-secrets/europe-west1/api/user/image --> api
+[debug] [2020-05-02T06:23:24.024Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T06:23:24.024Z] [worker-pool] Cleaned up workers for api: 1 --> 0 
+[debug] [2020-05-02T06:23:24.030Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-02T06:23:24.030Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-02T06:23:24.031Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-02T06:23:24.032Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\5076 
+[debug] [2020-05-02T06:23:24.032Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: BUSY 
+[debug] [2020-05-02T06:23:24.459Z] [runtime-status] [5076] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:23:24.461Z] [runtime-status] [5076] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:23:24.465Z] [runtime-status] [5076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:24.468Z] [runtime-status] [5076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:24.470Z] [runtime-status] [5076] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:23:24.516Z] [runtime-status] [5076] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:23:24.517Z] [runtime-status] [5076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:24.518Z] [runtime-status] [5076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:24.519Z] [runtime-status] [5076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:23:24.519Z] [runtime-status] [5076] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:23:24.637Z] [runtime-status] [5076] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:23:25.129Z] [runtime-status] [5076] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-02T06:23:25.130Z] [runtime-status] [5076] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-02T06:23:25.130Z] [runtime-status] [5076] Running api in mode HTTPS 
+[debug] [2020-05-02T06:23:25.133Z] [runtime-status] [5076] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\5076 
+[debug] [2020-05-02T06:23:25.136Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T06:23:25.160Z] [runtime-status] [5076] Ephemeral server handling POST request 
+[debug] [2020-05-02T06:23:25.224Z] [runtime-status] [5076] Ephemeral server survived. 
+[info] >  { {"user":"{"}
+[info] >    iss: 'https://securetoken.google.com/cs-surf-secrets', {"user":"  iss: 'https://securetoken.google.com/cs-surf-secrets',"}
+[info] >    aud: 'cs-surf-secrets', {"user":"  aud: 'cs-surf-secrets',"}
+[info] >    auth_time: 1588399956, {"user":"  auth_time: 1588399956,"}
+[info] >    user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  user_id: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1', {"user":"  sub: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1',"}
+[info] >    iat: 1588399956, {"user":"  iat: 1588399956,"}
+[info] >    exp: 1588403556, {"user":"  exp: 1588403556,"}
+[info] >    email: 'new@may3.com', {"user":"  email: 'new@may3.com',"}
+[info] >    email_verified: false, {"user":"  email_verified: false,"}
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' }, {"user":"  firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },"}
+[info] >    uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1' {"user":"  uid: 'ckQ68r9O1IgraNCRHpaTfc2e1Wo1'"}
+[info] >  } {"user":"}"}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] >  image {"user":"image"}
+[info] >  moon.PNG {"user":"moon.PNG"}
+[info] >  image/png {"user":"image/png"}
+[warn] !  Google API requested!
+   - URL: "https://storage.googleapis.com/upload/storage/v1/b/cs-surf-secrets.appspot.com/o?uploadType=multipart&name=9545209.PNG"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~6s
+[debug] [2020-05-02T06:23:31.808Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: IDLE 
+[debug] [2020-05-02T06:23:31.808Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-02T06:25:32.563Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\utility\fbAuth.js changed, reloading triggers 
+[debug] [2020-05-02T06:25:33.564Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T06:25:33.565Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: FINISHING 
+[debug] [2020-05-02T06:25:33.565Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-05-02T06:25:33.565Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: FINISHING 
+[debug] [2020-05-02T06:25:33.573Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:25:33.574Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T06:25:33.574Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:25:33.574Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\11692 
+[debug] [2020-05-02T06:25:33.575Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: BUSY 
+[debug] [2020-05-02T06:25:33.583Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: exited 
+[debug] [2020-05-02T06:25:33.586Z] [worker-~diagnostic~-bc1c7a7f-58a4-42a6-87d0-4ac8776a8442]: FINISHED 
+[debug] [2020-05-02T06:25:33.587Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: exited 
+[debug] [2020-05-02T06:25:33.587Z] [worker-api-9c312990-edce-46d2-99cd-295664351823]: FINISHED 
+[debug] [2020-05-02T06:25:34.194Z] [runtime-status] [11692] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:25:34.196Z] [runtime-status] [11692] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:25:34.207Z] [runtime-status] [11692] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:25:34.208Z] [runtime-status] [11692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:25:34.212Z] [runtime-status] [11692] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:25:34.262Z] [runtime-status] [11692] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:25:34.263Z] [runtime-status] [11692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:25:34.264Z] [runtime-status] [11692] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:25:34.264Z] [runtime-status] [11692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:25:34.264Z] [runtime-status] [11692] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:25:34.437Z] [runtime-status] [11692] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:25:34.983Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: IDLE 
+[debug] [2020-05-02T06:27:00.110Z] File C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\handlers\users.js changed, reloading triggers 
+[debug] [2020-05-02T06:27:01.113Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T06:27:01.113Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: FINISHING 
+[debug] [2020-05-02T06:27:01.114Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T06:27:01.114Z] [worker-pool] Cleaned up workers for api: 1 --> 0 
+[debug] [2020-05-02T06:27:01.120Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T06:27:01.120Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T06:27:01.120Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T06:27:01.120Z] [worker-~diagnostic~-80ebc160-68fe-4cf6-a358-caa42f7b05ad]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\13692 
+[debug] [2020-05-02T06:27:01.120Z] [worker-~diagnostic~-80ebc160-68fe-4cf6-a358-caa42f7b05ad]: BUSY 
+[debug] [2020-05-02T06:27:01.126Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: exited 
+[debug] [2020-05-02T06:27:01.126Z] [worker-~diagnostic~-d8e6856a-57ac-4898-bfc1-1ecbfef5fb0a]: FINISHED 
+[debug] [2020-05-02T06:27:01.797Z] [runtime-status] [13692] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:27:01.799Z] [runtime-status] [13692] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:27:01.805Z] [runtime-status] [13692] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:01.807Z] [runtime-status] [13692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:01.810Z] [runtime-status] [13692] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:27:01.881Z] [runtime-status] [13692] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:27:01.882Z] [runtime-status] [13692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:01.883Z] [runtime-status] [13692] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:01.883Z] [runtime-status] [13692] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:01.883Z] [runtime-status] [13692] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:27:02.019Z] [runtime-status] [13692] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:27:02.649Z] [worker-~diagnostic~-80ebc160-68fe-4cf6-a358-caa42f7b05ad]: IDLE 
+[debug] [2020-05-02T06:27:39.184Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T06:27:39.185Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T06:27:39.185Z] Accepted request POST /cs-surf-secrets/europe-west1/api/user/image --> api
+[debug] [2020-05-02T06:27:39.185Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T06:27:39.188Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-02T06:27:39.188Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-02T06:27:39.188Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-02T06:27:39.188Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\11152 
+[debug] [2020-05-02T06:27:39.188Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: BUSY 
+[debug] [2020-05-02T06:27:39.656Z] [runtime-status] [11152] Functions runtime initialized. {"cwd":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions","node_version":"12.16.1"} 
+[debug] [2020-05-02T06:27:39.657Z] [runtime-status] [11152] Disabled runtime features: undefined 
+[debug] [2020-05-02T06:27:39.665Z] [runtime-status] [11152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:39.667Z] [runtime-status] [11152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:39.670Z] [runtime-status] [11152] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T06:27:39.711Z] [runtime-status] [11152] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T06:27:39.712Z] [runtime-status] [11152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:39.714Z] [runtime-status] [11152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:39.714Z] [runtime-status] [11152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-02T06:27:39.715Z] [runtime-status] [11152] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\David\\Desktop\\Coding\\Work\\cs-surf-secrets\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-02T06:27:39.840Z] [runtime-status] [11152] initializeApp(DEFAULT) {"databaseURL":"https://cs-surf-secrets.firebaseio.com","storageBucket":"cs-surf-secrets.appspot.com","projectId":"cs-surf-secrets"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-02T06:27:40.308Z] [runtime-status] [11152] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-02T06:27:40.310Z] [runtime-status] [11152] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-02T06:27:40.310Z] [runtime-status] [11152] Running api in mode HTTPS 
+[debug] [2020-05-02T06:27:40.313Z] [runtime-status] [11152] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\11152 
+[debug] [2020-05-02T06:27:40.317Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T06:27:40.330Z] [runtime-status] [11152] Ephemeral server handling POST request 
+[debug] [2020-05-02T06:27:40.390Z] [runtime-status] [11152] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-02T06:27:41.395Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: IDLE 
+[debug] [2020-05-02T06:27:41.395Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-02T06:27:50.921Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T06:27:50.922Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T06:27:50.922Z] Accepted request POST /cs-surf-secrets/europe-west1/api/user/image --> api
+[debug] [2020-05-02T06:27:50.922Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-02T06:27:50.922Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: Assigning socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\11152 
+[debug] [2020-05-02T06:27:50.922Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: BUSY 
+[debug] [2020-05-02T06:27:50.923Z] [runtime-status] [11152] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-02T06:27:50.926Z] [runtime-status] [11152] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-02T06:27:50.926Z] [runtime-status] [11152] Running api in mode HTTPS 
+[debug] [2020-05-02T06:27:50.927Z] [runtime-status] [11152] Attempting to listen to socketPath: \\?\pipe\C:\Users\David\Desktop\Coding\Work\cs-surf-secrets\functions\11152 
+[debug] [2020-05-02T06:27:50.930Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T06:27:50.940Z] [runtime-status] [11152] Ephemeral server handling POST request 
+[debug] [2020-05-02T06:27:50.940Z] [runtime-status] [11152] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://storage.googleapis.com/upload/storage/v1/b/cs-surf-secrets.appspot.com/o?uploadType=multipart&name=2241068.png"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-02T06:27:52.553Z] [worker-api-9150b940-7db1-4193-aacb-397ddc25a46a]: IDLE 
+[debug] [2020-05-02T06:27:52.553Z] [work-queue] {"queueLength":0,"workRunningCount":0}
