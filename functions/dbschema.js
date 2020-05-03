@@ -20,6 +20,14 @@ let db = {
       commentCount: 1,
     },
   ],
+  comments: [
+    {
+      userHandle: "user",
+      postId: "kjshdfkjhsekjfsef",
+      body: "nice post man!",
+      createdAt: "2020-05-01T03:26:52.283Z",
+    },
+  ],
 };
 const UserDetails = {
   // Redux
