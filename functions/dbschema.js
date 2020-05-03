@@ -28,6 +28,16 @@ let db = {
       createdAt: "2020-05-01T03:26:52.283Z",
     },
   ],
+  notifications: [
+    {
+      recipient: "user",
+      sender: "user2",
+      read: "true | false",
+      postId: "kjshdfkjhsekjfsef",
+      type: "like | comment",
+      createdAt: "2020-05-01T03:26:52.283Z",
+    },
+  ],
 };
 const UserDetails = {
   // Redux
