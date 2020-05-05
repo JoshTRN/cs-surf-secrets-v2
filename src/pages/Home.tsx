@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Post from "../components/Post";
 
-class HomePage extends Component<any, any> {
+class HomePage extends Component<{}, { posts?: any }> {
   /* constructor(props: any) {
     super(props);
 
@@ -49,7 +50,7 @@ class HomePage extends Component<any, any> {
 
   render() {
     let recentPostsMarkup = this.state.posts ? (
-      this.state.posts.map((post: any) => <p>{post.body}</p>)
+      this.state.posts.map((post: any) => <Post post={post} />)
     ) : (
       <p>Loading...</p>
     );
