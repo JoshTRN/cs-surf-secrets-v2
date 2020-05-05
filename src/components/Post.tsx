@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { analytics } from "firebase";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 class Post extends Component<any, any> {
   render() {
+    dayjs.extend(relativeTime);
     const {
       post: {
         body,
@@ -17,10 +19,15 @@ class Post extends Component<any, any> {
     return (
       <div className="posts">
         <div className="posts">
-          <img height="50px" width="50px" src={`${userImage}`} />
+          <img
+            height="50px"
+            width="50px"
+            src={`${userImage}`}
+            alt={`${userHandle}`}
+          />
         </div>
         <h4>{userHandle}</h4>
-        <p>{createdAt}</p>
+        <p>{dayjs(createdAt).fromNow()}</p>
         <p>{body}</p>
       </div>
     );
