@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-import { fAuth } from "../config/fbConfig";
+import axios from "axios";
+import { Link } from "@reach/router";
 
 class LoginPage extends Component<any, any> {
   constructor(props: any) {
@@ -9,8 +9,36 @@ class LoginPage extends Component<any, any> {
     this.state = {
       email: "",
       password: "",
+      // add Loading animation
+      errors: {},
     };
   }
+
+  handleChange = (e: any) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  handleSubmit = (e: any) => {
+    e.preventDefault();
+    const userData = {
+      email: this.state.email,
+      password: this.state.password,
+    };
+    axios
+      .post("/login", userData)
+      .then((res) => {
+        this.props.history.push("/");
+      })
+      .catch((err) => {
+        this.setState({
+          errors: err.response.data,
+        });
+      });
+  };
+
+  /*
 
   handleEmailChange = (event: any) => {
     this.setState({
@@ -35,38 +63,54 @@ class LoginPage extends Component<any, any> {
         password: "",
       });
     });
-  };
+  }; */
 
   render() {
+    const { errors } = this.state;
     return (
       <div className="signup">
         <h4>Login</h4>
-        <form className="signup-form" onSubmit={this.handleSubmit}>
+        <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
           <div>
             <label>Email Address</label>
             <input
               className="input"
+              id="email"
+              name="email"
               type="email"
               value={this.state.email}
-              onChange={this.handleEmailChange}
+              onChange={this.handleChange}
             />
+            {errors.email && <p>{errors.email}</p>}
           </div>
           <div>
             <label>Password</label>
             <input
               className="input"
+              id="password"
+              name="password"
               type="password"
               value={this.state.password}
-              onChange={this.handlePasswordChange}
+              onChange={this.handleChange}
             />
+            {errors.password && <p>{errors.password}</p>}
           </div>
+          {errors.general && <p>{errors.general}</p>}
           <button className="button" type="submit">
             LOGIN
           </button>
+          <br />
+          <small>
+            Don't have an account? sign up <Link to="signup">Here</Link>
+          </small>
         </form>
       </div>
     );
   }
 }
+
+/* LoginPage.propTypes = {
+  classes: PropTypes.object.isRequired
+} */
 
 export default LoginPage;
