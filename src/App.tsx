@@ -5,7 +5,7 @@ import HomePage from "./pages/Home";
 import SignupPage from "./pages/Signup";
 import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
-import { List } from './components/List';
+import { List } from "./components/List";
 
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
@@ -27,7 +27,7 @@ function App() {
         <Login path="login" />
       </Router>
       <br />
-	  <List />
+      <List />
     </div>
   );
 }

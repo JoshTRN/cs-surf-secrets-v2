@@ -1,24 +1,36 @@
 import React, { Component } from "react";
-import { fAuth, fDb } from "../config/fbConfig";
-import Posts from "../components/Posts";
+import axios from "axios";
 
 class HomePage extends Component<any, any> {
-  constructor(props: any) {
+  /* constructor(props: any) {
     super(props);
 
     this.state = {
       loggedIn: false,
       data: [
         {
-          title: "titeeel",
-          content: "coneetn",
+          title: "title",
+          content: "content",
         },
       ],
     };
-  }
+  } */
+
+  state: any = {
+    posts: null,
+  };
 
   componentDidMount() {
-    fDb
+    axios
+      .get("/posts")
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          posts: res.data,
+        });
+      })
+      .catch((err) => console.log(err));
+    /*     fDb
       .collection("posts")
       .get()
       .then((snapshot) => {
@@ -26,34 +38,31 @@ class HomePage extends Component<any, any> {
         this.setState({
           data: this.state.data.concat(data),
         });
-      });
+      }); */
   }
 
-  authEvent = fAuth.onAuthStateChanged((user) => {
+  /* authEvent = fAuth.onAuthStateChanged((user) => {
     this.setState({
       loggedIn: user ? true : false,
     });
-  });
+  }); */
 
   render() {
-    if (this.state.loggedIn) {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <h1>Posts</h1>
-          {this.state.data.map(({ title, content }: any) => (
-            <Posts key={title} title={title} content={content} />
-          ))}
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <h1>Login to see posts</h1>
-        </div>
-      );
-    }
+    let recentPostsMarkup = this.state.posts ? (
+      this.state.posts.map((post: any) => <p>{post.body}</p>)
+    ) : (
+      <p>Loading...</p>
+    );
+    return (
+      <div>
+        {/* Conditional rendering when logged in/not */}
+        <h1>Posts</h1>
+        <h2>{recentPostsMarkup}</h2>
+        {/* {this.state.posts.map(({ title, content }: any) => (
+          <Posts key={title} title={title} content={content} />
+        ))} */}
+      </div>
+    );
   }
 }
 
