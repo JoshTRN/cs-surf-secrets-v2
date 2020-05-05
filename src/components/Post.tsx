@@ -16,8 +16,11 @@ class Post extends Component<any, any> {
     } = this.props;
     return (
       <div className="posts">
-        <h2>Posts</h2>
+        <div className="posts">
+          <img height="50px" width="50px" src={`${userImage}`} />
+        </div>
         <h4>{userHandle}</h4>
+        <p>{createdAt}</p>
         <p>{body}</p>
       </div>
     );
