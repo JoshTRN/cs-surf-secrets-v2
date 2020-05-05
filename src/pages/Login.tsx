@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "@reach/router";
-
+import { navigate } from "@reach/router";
 class LoginPage extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -29,12 +29,15 @@ class LoginPage extends Component<any, any> {
     axios
       .post("/login", userData)
       .then((res) => {
-        this.props.history.push("/");
+        navigate(`/`);
       })
       .catch((err) => {
-        this.setState({
-          errors: err.response.data,
-        });
+        console.log(err);
+        if (err.response) {
+          this.setState({
+            errors: err.response.data,
+          });
+        }
       });
   };
 
