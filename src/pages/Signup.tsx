@@ -1,123 +1,117 @@
 import React, { Component } from "react";
-
-import { fAuth, fDb } from "../config/fbConfig";
-
-const monthNames = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
-];
-
-class Signup extends Component<any, any> {
+import axios from "axios";
+import { Link } from "@reach/router";
+import { navigate } from "@reach/router";
+class SignupPage extends Component<any, any> {
   constructor(props: any) {
     super(props);
 
     this.state = {
       email: "",
       password: "",
+      confirmPassword: "",
+      handle: "",
+      // add Loading animation
+      errors: {},
     };
   }
 
-  // 5:30:00 - combine these event handlers
-
-  handleEmailChange = (event: any) => {
+  handleChange = (e: any) => {
     this.setState({
-      email: event.target.value,
-    });
-  };
-
-  handlePasswordChange = (event: any) => {
-    this.setState({
-      password: event.target.value,
-    });
-  };
-
-  handleUsernameChange = (event: any) => {
-    this.setState({
-      username: event.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
   handleSubmit = (e: any) => {
     e.preventDefault();
-    alert(
-      `Email: ${this.state.email} Password: ${this.state.password} Username: ${this.state.username}`
-    );
-    const email = this.state.email;
-    const password = this.state.password;
-    const username = this.state.username;
-    fAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((cred) => {
-        let d8 = new Date();
-        return fDb
-          .collection("users")
-          .doc(cred?.user?.uid)
-          .set({
-            username: username,
-            memberSince: `${d8.getDate()} ${
-              monthNames[d8.getMonth()]
-            } ${d8.getFullYear()}`,
-          });
+    const newUserData = {
+      email: this.state.email,
+      password: this.state.password,
+      confirmPassword: this.state.confirmPassword,
+      handle: this.state.handle,
+    };
+    axios
+      .post("/signup", newUserData)
+      .then((res) => {
+        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
+        navigate(`/`);
       })
-      .then(() => {
-        // reset form
-        this.setState({
-          username: "",
-          email: "",
-          password: "",
-        });
+      .catch((err) => {
+        console.log(err);
+        if (err.response) {
+          this.setState({
+            errors: err.response.data,
+          });
+        }
       });
   };
 
   render() {
+    const { errors } = this.state;
     return (
       <div className="signup">
-        <h4>Sign up</h4>
-        <form className="signup-form" onSubmit={this.handleSubmit}>
+        <h4>Signup</h4>
+        <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
           <div>
             <label>Email Address</label>
             <input
               className="input"
+              id="email"
+              name="email"
               type="email"
               value={this.state.email}
-              onChange={this.handleEmailChange}
+              onChange={this.handleChange}
             />
+            {errors.email && <p>{errors.email}</p>}
           </div>
           <div>
             <label>Password</label>
             <input
               className="input"
+              id="password"
+              name="password"
               type="password"
               value={this.state.password}
-              onChange={this.handlePasswordChange}
+              onChange={this.handleChange}
             />
+            {errors.password && <p>{errors.password}</p>}
+          </div>
+          <div>
+            <label>Confirm Password</label>
+            <input
+              className="input"
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              value={this.state.confirmPassword}
+              onChange={this.handleChange}
+            />
+            {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
           </div>
           <div>
             <label>Username</label>
             <input
               className="input"
+              id="handle"
+              name="handle"
               type="text"
-              value={this.state.username}
-              onChange={this.handleUsernameChange}
+              value={this.state.handle}
+              onChange={this.handleChange}
             />
+            {errors.handle && <p>{errors.handle}</p>}
           </div>
+          {errors.general && <p>{errors.general}</p>}
           <button className="button" type="submit">
-            SIGNUP
+            Signup
           </button>
+          <br />
+          <small>
+            Already have an account? Login <Link to="login">Here</Link>
+          </small>
         </form>
       </div>
     );
   }
 }
 
-export default Signup;
+export default SignupPage;

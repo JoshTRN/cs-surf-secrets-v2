@@ -29,6 +29,7 @@ class LoginPage extends Component<any, any> {
     axios
       .post("/login", userData)
       .then((res) => {
+        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
         navigate(`/`);
       })
       .catch((err) => {
