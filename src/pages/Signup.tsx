@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "@reach/router";
 import { navigate } from "@reach/router";
+
+import { connect } from "react-redux";
+import { signupUser } from "../redux/actions/userActions";
+
 class SignupPage extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -22,6 +26,12 @@ class SignupPage extends Component<any, any> {
     });
   };
 
+  componentWillReceiveProps(nextProps: any) {
+    if (nextProps.UI.errors) {
+      this.setState({ errors: nextProps.UI.errors });
+    }
+  }
+
   handleSubmit = (e: any) => {
     e.preventDefault();
     const newUserData = {
@@ -30,20 +40,7 @@ class SignupPage extends Component<any, any> {
       confirmPassword: this.state.confirmPassword,
       handle: this.state.handle,
     };
-    axios
-      .post("/signup", newUserData)
-      .then((res) => {
-        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
-        navigate(`/`);
-      })
-      .catch((err) => {
-        console.log(err);
-        if (err.response) {
-          this.setState({
-            errors: err.response.data,
-          });
-        }
-      });
+    this.props.signupUser(newUserData);
   };
 
   render() {
@@ -114,4 +111,9 @@ class SignupPage extends Component<any, any> {
   }
 }
 
-export default SignupPage;
+const mapStateToProps = (state: any) => ({
+  user: state.user,
+  UI: state.UI,
+});
+
+export default connect(mapStateToProps, { signupUser })(SignupPage);
