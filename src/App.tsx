@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { Router, RouteComponentProps } from "@reach/router";
 import jwtDecode from "jwt-decode";
+
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 import HomePage from "./pages/Home";
 import SignupPage from "./pages/Signup";
@@ -29,21 +32,25 @@ if (token) {
   }
 }
 
-function App() {
-  return (
-    <div>
-      <MyHeader />
-      <MyNav />
-      <Router>
-        <Home path="/" />
-        <Profile path="profile" />
-        <Signup path="signup" />
-        <Login path="login" />
-      </Router>
-      <br />
-      <List />
-    </div>
-  );
+class App extends Component<any, any> {
+  render() {
+    return (
+      <Provider store={store}>
+        <div>
+          <MyHeader />
+          <MyNav />
+          <Router>
+            <Home path="/" />
+            <Profile path="profile" />
+            <Signup path="signup" />
+            <Login path="login" />
+          </Router>
+          <br />
+          <List />
+        </div>
+      </Provider>
+    );
+  }
 }
 
 export default App;

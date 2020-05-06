@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Link } from "@reach/router";
-import { navigate } from "@reach/router";
+
+import { connect } from "react-redux";
+import { loginUser } from "../redux/actions/userActions";
 class LoginPage extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -9,7 +10,6 @@ class LoginPage extends Component<any, any> {
     this.state = {
       email: "",
       password: "",
-      // add Loading animation
       errors: {},
     };
   }
@@ -20,26 +20,19 @@ class LoginPage extends Component<any, any> {
     });
   };
 
+  componentWillReceiveProps(nextProps: any) {
+    if (nextProps.UI.errors) {
+      this.setState({ errors: nextProps.UI.errors });
+    }
+  }
+
   handleSubmit = (e: any) => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
       password: this.state.password,
     };
-    axios
-      .post("/login", userData)
-      .then((res) => {
-        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
-        navigate(`/`);
-      })
-      .catch((err) => {
-        console.log(err);
-        if (err.response) {
-          this.setState({
-            errors: err.response.data,
-          });
-        }
-      });
+    this.props.loginUser(userData);
   };
 
   /*
@@ -105,7 +98,7 @@ class LoginPage extends Component<any, any> {
           </button>
           <br />
           <small>
-            Don't have an account? sign up <Link to="signup">Here</Link>
+            Don't have an account? sign up <Link to="/signup">Here</Link>
           </small>
         </form>
       </div>
@@ -114,7 +107,18 @@ class LoginPage extends Component<any, any> {
 }
 
 /* LoginPage.propTypes = {
-  classes: PropTypes.object.isRequired
-} */
+  loginUser: PropTypes.func.isRequired,
+  user: PropTypes.func.isRequired,
+  UI: PropTypes.func.isRequired,
+}; */
 
-export default LoginPage;
+const mapStateToProps = (state: any) => ({
+  user: state.user,
+  UI: state.UI,
+});
+
+const mapActionsToProps = {
+  loginUser,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(LoginPage);

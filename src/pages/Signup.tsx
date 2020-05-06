@@ -106,7 +106,7 @@ class SignupPage extends Component<any, any> {
           </button>
           <br />
           <small>
-            Already have an account? Login <Link to="login">Here</Link>
+            Already have an account? Login <Link to="/login">Here</Link>
           </small>
         </form>
       </div>
