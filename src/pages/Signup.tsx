@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import { Link } from "@reach/router";
-import { navigate } from "@reach/router";
 
 import { connect } from "react-redux";
 import { signupUser } from "../redux/actions/userActions";

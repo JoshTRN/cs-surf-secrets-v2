@@ -1,66 +1,51 @@
 import React, { Component } from "react";
-import { fAuth, fDb } from "../config/fbConfig";
+import { Link } from "@reach/router";
+import axios from "axios";
+import dayjs from "dayjs";
 
-const logo = require("./moon.PNG");
-
-class ProfilePage extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      loggedIn: false,
-    };
-  }
-
-  componentDidMount() {
-    fDb
-      .collection("users")
-      .get()
-      .then((snapshot) => {
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          this.setState({
-            username: data.username,
-          });
-        });
-
-        /* this.setState({
-          data: data[0],
-          /* this.state.data.concat(data), */
-        /* }); */
-      });
-  }
-
-  authEvent = fAuth.onAuthStateChanged((user) => {
-    this.setState({
-      loggedIn: user ? true : false,
-    });
-    this.setState({
-      email: user?.email,
-    });
-  });
-
+import { connect } from "react-redux";
+class Profile extends Component<any, any> {
   render() {
-    if (this.state.loggedIn) {
-      return (
+    const {
+      user: {
+        credentials: { handle, createdAt, imageUrl, bio, steam, location },
+        loading,
+        authenticated,
+      },
+    } = this.props;
+
+    let profileMarkup = !loading ? (
+      authenticated ? (
         <div>
-          {/* Conditional rendering when logged in/not */}
-          <img src={logo} alt="logo" className="logo" />
-          <h1>{this.state.username}</h1>
-          <h4>Member Since</h4>
-          <h6>20 April 2020</h6>
-          <h4>Profile Views</h4>
-          <h6>238</h6>
+          <div className="profile-image">
+            <img height="50px" width="50px" src={`${imageUrl}`} alt="profile" />
+          </div>
+          <hr />
+          <div className="profile-details">
+            <Link to={`users/${handle}`}>{handle}</Link>
+            <hr />
+            {bio && <p>{bio}</p>}
+            <hr />
+            {location && <p>{location}</p>}
+            <hr />
+            {steam && <p>{steam}</p>}
+            <hr />
+            <p>{dayjs(createdAt).format("MMM YYYY")}</p>
+          </div>
         </div>
-      );
-    } else {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <h1>Login to see profile</h1>
-        </div>
-      );
-    }
+      ) : (
+        <p>No profile found, please login</p>
+      )
+    ) : (
+      <p>loading...</p>
+    );
+
+    return profileMarkup;
   }
 }
-export default ProfilePage;
+
+const mapStateToProps = (state: any) => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps)(Profile);
