@@ -4,7 +4,15 @@ import axios from "axios";
 import dayjs from "dayjs";
 
 import { connect } from "react-redux";
+import { logoutUser, uploadImage } from "../redux/actions/userActions";
 class Profile extends Component<any, any> {
+  handleImageChange = (event: any) => {
+    const image = event.target.files[0];
+    const formData = new FormData();
+    formData.append("image", image, image.name);
+    this.props.uploadImage(formData);
+  };
+
   render() {
     const {
       user: {
@@ -19,6 +27,11 @@ class Profile extends Component<any, any> {
         <div>
           <div className="profile-image">
             <img height="50px" width="50px" src={`${imageUrl}`} alt="profile" />
+            <input
+              type="file"
+              id="imageInput"
+              onChange={this.handleImageChange}
+            />
           </div>
           <hr />
           <div className="profile-details">
@@ -48,4 +61,9 @@ const mapStateToProps = (state: any) => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps)(Profile);
+const mapActionsToProps = {
+  logoutUser,
+  uploadImage,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Profile);

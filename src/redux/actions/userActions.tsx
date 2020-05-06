@@ -4,6 +4,7 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   SET_UNAUTHENTICATED,
+  LOADING_USER,
 } from "../types";
 import axios from "axios";
 import { navigate } from "@reach/router";
@@ -56,6 +57,16 @@ export const getUserData = () => (dispatch: any) => {
         type: SET_USER,
         payload: res.data,
       });
+    })
+    .catch((err) => console.log(err));
+};
+
+export const uploadImage = (formData: any) => (dispatch: any) => {
+  dispatch({ type: LOADING_USER });
+  axios
+    .post("/user/image", formData)
+    .then((res) => {
+      dispatch(getUserData());
     })
     .catch((err) => console.log(err));
 };
