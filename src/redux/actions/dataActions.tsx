@@ -1,6 +1,5 @@
 import { SET_POSTS, LOADING_DATA, LIKE_POST, UNLIKE_POST } from "../types";
 import axios from "axios";
-import { analytics } from "firebase";
 
 export const getPosts = () => (dispatch: any) => {
   dispatch({ type: LOADING_DATA });
@@ -17,6 +16,7 @@ export const getPosts = () => (dispatch: any) => {
         type: SET_POSTS,
       }); */
       // FIX THIS
+      console.log(err);
     });
 };
 

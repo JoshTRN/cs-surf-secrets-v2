@@ -10,9 +10,16 @@ import {
   UNLIKE_POST,
 } from "../types";
 
-const initialState = {
+interface initialState {
+  authenticated: any;
+  credentials: any;
+  likes: any;
+  notifications: any;
+}
+
+const initialState: initialState = {
   authenticated: false,
-  credentials: { handle: "" },
+  credentials: {},
   likes: [],
   notifications: [],
 };
@@ -51,7 +58,7 @@ export default function (state = initialState, action: any) {
       return {
         ...state,
         likes: state.likes.filter(
-          (like: any) => like.postId === action.payload.postId
+          (like: any) => like.postId !== action.payload.postId
         ),
       };
     default:
