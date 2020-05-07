@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import DeletePost from "../components/DeletePost";
 
 import { connect } from "react-redux";
 import { likePost, unlikePost } from "../redux/actions/dataActions";
@@ -25,8 +26,19 @@ class Post extends Component<any, any> {
   render() {
     dayjs.extend(relativeTime);
     const {
-      post: { body, createdAt, userImage, userHandle, likeCount, commentCount },
-      user: { authenticated },
+      post: {
+        body,
+        createdAt,
+        userImage,
+        userHandle,
+        likeCount,
+        commentCount,
+        postId,
+      },
+      user: {
+        authenticated,
+        credentials: { handle },
+      },
     } = this.props;
 
     const likeButton = !authenticated ? (
@@ -41,6 +53,11 @@ class Post extends Component<any, any> {
       </button>
     );
 
+    const deleteButton =
+      authenticated && userHandle === handle ? (
+        <DeletePost postId={postId} />
+      ) : null;
+
     return (
       <div className="posts">
         <div className="posts">
@@ -52,6 +69,7 @@ class Post extends Component<any, any> {
           />
         </div>
         <h4>{userHandle}</h4>
+        {deleteButton}
         <p>{dayjs(createdAt).fromNow()}</p>
         <p>{body}</p>
         {likeButton}

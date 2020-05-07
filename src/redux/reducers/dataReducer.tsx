@@ -1,4 +1,10 @@
-import { SET_POSTS, LIKE_POST, UNLIKE_POST, LOADING_DATA } from "../types";
+import {
+  SET_POSTS,
+  LIKE_POST,
+  UNLIKE_POST,
+  LOADING_DATA,
+  DELETE_POST,
+} from "../types";
 
 interface initialState {
   posts: any;
@@ -31,6 +37,14 @@ export default function (state = initialState, action: any) {
         (post: any) => post.postId === action.payload.postId
       );
       state.posts[index] = action.payload;
+      return {
+        ...state,
+      };
+    case DELETE_POST:
+      let deleteIndex = state.posts.findIndex(
+        (post: any) => post.postId === action.payload
+      );
+      state.posts.splice(deleteIndex, 1);
       return {
         ...state,
       };
