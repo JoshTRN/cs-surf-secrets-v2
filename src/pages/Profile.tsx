@@ -53,6 +53,7 @@ class Profile extends Component<any, any> {
           <button className="button" onClick={this.handleLogout}>
             LOGOUT
           </button>
+          <EditDetails />
         </div>
       ) : (
         <p>No profile found, please login</p>
