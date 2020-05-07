@@ -1,19 +1,40 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "@reach/router";
 
-function MyNav() {
-  return (
-    <div className="nav">
-      <ul>
-        <Link to="/" className="nav-link">
-          HOME
-        </Link>
-        <Link to="profile" className="nav-link">
-          PROFILE
-        </Link>
-      </ul>
-    </div>
-  );
+import { connect } from "react-redux";
+
+class MyNav extends Component<any, any> {
+  render() {
+    const { authenticated } = this.props;
+    return (
+      <div className="nav">
+        {authenticated ? (
+          <Fragment>
+            <ul>
+              <Link to="/" className="nav-link">
+                HOME
+              </Link>
+              <Link to="profile" className="nav-link">
+                PROFILE
+              </Link>
+            </ul>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <ul>
+              <Link to="/" className="nav-link">
+                HOME
+              </Link>
+            </ul>
+          </Fragment>
+        )}
+      </div>
+    );
+  }
 }
 
-export default MyNav;
+const mapStateToProps = (state: any) => ({
+  authenticated: state.user.authenticated,
+});
+
+export default connect(mapStateToProps)(MyNav);

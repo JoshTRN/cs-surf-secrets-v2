@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "@reach/router";
-import { fAuth } from "../config/fbConfig";
+
+import { connect } from "react-redux";
 
 import logo from "../Assets/images/surfsecrets_logo.png";
 
@@ -11,24 +12,30 @@ class MyHeader extends Component<any, any> {
     this.state = {};
   }
 
-  handleSubmit = (e: any) => {
-    e.preventDefault();
-    fAuth.signOut();
-  };
-
   render() {
+    const { authenticated } = this.props;
     return (
       <div className="header">
         <img className="logo" alt="Surf Secrets Logo" src={logo}></img>
-        <Link to="signup" className="nav-link">
-          SIGNUP
-        </Link>
-        <Link to="login" className="nav-link">
-          LOGIN
-        </Link>
+        {authenticated ? (
+          <Fragment></Fragment>
+        ) : (
+          <Fragment>
+            <Link to="signup" className="nav-link">
+              SIGNUP
+            </Link>
+            <Link to="login" className="nav-link">
+              LOGIN
+            </Link>
+          </Fragment>
+        )}
       </div>
     );
   }
 }
 
-export default MyHeader;
+const mapStateToProps = (state: any) => ({
+  authenticated: state.user.authenticated,
+});
+
+export default connect(mapStateToProps)(MyHeader);
