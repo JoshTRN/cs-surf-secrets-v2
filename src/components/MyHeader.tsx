@@ -26,9 +26,6 @@ class MyHeader extends Component<any, any> {
         <Link to="login" className="nav-link">
           LOGIN
         </Link>
-        <button className="button" onClick={this.handleSubmit}>
-          LOGOUT
-        </button>
       </div>
     );
   }

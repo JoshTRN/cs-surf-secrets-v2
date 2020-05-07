@@ -1,8 +1,8 @@
 import {
   SET_USER,
-  SET_ERRORS,
+  /*   SET_ERRORS,
   CLEAR_ERRORS,
-  LOADING_UI,
+  LOADING_UI, */
   SET_AUTHENTICATED,
   SET_UNAUTHENTICATED,
   LOADING_USER,
@@ -28,6 +28,11 @@ export default function (state = initialState, action: any) {
       return {
         authenticated: true,
         ...action.payload,
+      };
+    case LOADING_USER:
+      return {
+        ...state,
+        loading: true,
       };
     default:
       return state;

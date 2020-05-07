@@ -11,9 +11,9 @@ class Post extends Component<any, any> {
         createdAt,
         userImage,
         userHandle,
-        postId,
+        /*         postId,
         likeCount,
-        commentCount,
+        commentCount, */
       },
     } = this.props;
     return (

@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import axios from "axios";
 import dayjs from "dayjs";
 
 import { connect } from "react-redux";
 import { logoutUser, uploadImage } from "../redux/actions/userActions";
+
+import EditDetails from "../components/EditDetails";
 class Profile extends Component<any, any> {
   handleImageChange = (event: any) => {
     const image = event.target.files[0];
     const formData = new FormData();
     formData.append("image", image, image.name);
     this.props.uploadImage(formData);
+  };
+
+  handleLogout = (e: any) => {
+    this.props.logoutUser();
   };
 
   render() {
@@ -45,6 +50,9 @@ class Profile extends Component<any, any> {
             <hr />
             <p>{dayjs(createdAt).format("MMM YYYY")}</p>
           </div>
+          <button className="button" onClick={this.handleLogout}>
+            LOGOUT
+          </button>
         </div>
       ) : (
         <p>No profile found, please login</p>

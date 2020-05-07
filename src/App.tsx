@@ -16,7 +16,6 @@ import { List } from "./components/List";
 
 import MyHeader from "./components/MyHeader";
 import MyNav from "./components/MyNav";
-import Axios from "axios";
 
 const Home = (props: RouteComponentProps) => <HomePage />;
 const Profile = (props: RouteComponentProps) => <ProfilePage />;
