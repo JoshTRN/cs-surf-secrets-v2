@@ -5,6 +5,7 @@ import {
   LOADING_DATA,
   DELETE_POST,
   CREATE_POST,
+  SET_POST,
 } from "../types";
 
 interface initialState {
@@ -31,6 +32,11 @@ export default function (state = initialState, action: any) {
         ...state,
         posts: action.payload,
         loading: false,
+      };
+    case SET_POST:
+      return {
+        ...state,
+        post: action.payload,
       };
     case LIKE_POST:
     case UNLIKE_POST:

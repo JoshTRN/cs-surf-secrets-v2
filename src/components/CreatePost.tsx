@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 
 import { connect } from "react-redux";
 import { createPost, clearErrors } from "../redux/actions/dataActions";
-import { render } from "@testing-library/react";
 
 interface State {
   open: any;

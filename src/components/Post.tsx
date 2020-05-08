@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeletePost from "../components/DeletePost";
+import PostDialog from "./PostDialog";
 
 import { connect } from "react-redux";
 import { likePost, unlikePost } from "../redux/actions/dataActions";
@@ -76,6 +77,7 @@ class Post extends Component<any, any> {
         <span>{likeCount} Likes</span>
         <br />
         <span>{commentCount} Comments</span>
+        <PostDialog postId={postId} userHandle={userHandle} />
       </div>
     );
   }
