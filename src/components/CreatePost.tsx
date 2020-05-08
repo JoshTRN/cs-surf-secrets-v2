@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import { connect } from "react-redux";
-import { createPost } from "../redux/actions/dataActions";
+import { createPost, clearErrors } from "../redux/actions/dataActions";
 import { render } from "@testing-library/react";
 
 interface State {
@@ -23,7 +23,7 @@ class CreatePost extends Component<any, any> {
       });
     }
     if (!nextProps.UI.errors && !nextProps.UI.loading) {
-      this.setState({ body: "" });
+      this.setState({ body: "", open: false, errors: {} });
     }
   }
 
@@ -32,6 +32,7 @@ class CreatePost extends Component<any, any> {
   };
 
   handleClose = () => {
+    this.props.clearErrors();
     this.setState({ open: false, errors: {} });
   };
 
@@ -94,4 +95,6 @@ const mapStateToProps = (state: any) => ({
   UI: state.UI,
 });
 
-export default connect(mapStateToProps, { createPost })(CreatePost);
+export default connect(mapStateToProps, { createPost, clearErrors })(
+  CreatePost
+);
