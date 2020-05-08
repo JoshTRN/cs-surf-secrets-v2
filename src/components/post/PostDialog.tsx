@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import dayjs from "dayjs";
 import { Link } from "@reach/router";
 import LikeButton from "./LikeButton";
+import Comments from "./Comments";
 
 import { connect } from "react-redux";
 import { getPost } from "../../redux/actions/dataActions";
@@ -30,6 +31,7 @@ class PostDialog extends Component<any, any> {
         commentCount,
         userImage,
         userHandle,
+        comments,
       },
       UI: { loading },
     } = this.props;
@@ -61,6 +63,8 @@ class PostDialog extends Component<any, any> {
         <span>{likeCount} likes</span>
         <br />
         <span>{commentCount} Comments</span>
+        <hr />
+        <Comments comments={comments} />
       </div>
     );
 
@@ -69,12 +73,16 @@ class PostDialog extends Component<any, any> {
         <button className="button" onClick={this.handleOpen}>
           EXPAND POST
         </button>
-        <div style={this.state.open ? trueOpen : falseOpen}>
-          <button className="button" onClick={this.handleClose}>
-            Cancel
-          </button>
-          {dialogMarkup}
-        </div>
+        {this.state.open ? (
+          <div style={this.state.open ? trueOpen : falseOpen}>
+            <button className="button" onClick={this.handleClose}>
+              Cancel
+            </button>
+            {dialogMarkup}
+          </div>
+        ) : (
+          <div></div>
+        )}
       </Fragment>
     );
   }
