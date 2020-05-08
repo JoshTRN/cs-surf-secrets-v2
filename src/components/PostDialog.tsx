@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import dayjs from "dayjs";
 import { Link } from "@reach/router";
+import LikeButton from "./LikeButton";
 
 import { connect } from "react-redux";
 import { getPost } from "../redux/actions/dataActions";
@@ -56,6 +57,10 @@ class PostDialog extends Component<any, any> {
         <p>{dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}</p>
         <hr />
         <p>{body}</p>
+        <LikeButton postId={postId} />
+        <span>{likeCount} likes</span>
+        <br />
+        <span>{commentCount} Comments</span>
       </div>
     );
 
