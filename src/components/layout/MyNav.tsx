@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "@reach/router";
 
-import CreatePost from "./CreatePost";
+import CreatePost from "../post/CreatePost";
 
 import { connect } from "react-redux";
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import DeletePost from "../components/DeletePost";
+import DeletePost from "./DeletePost";
 import PostDialog from "./PostDialog";
 import LikeButton from "./LikeButton";
 

@@ -14,8 +14,8 @@ import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
 import { List } from "./components/List";
 
-import MyHeader from "./components/MyHeader";
-import MyNav from "./components/MyNav";
+import MyHeader from "./components/layout/MyHeader";
+import MyNav from "./components/layout/MyNav";
 
 const Home = (props: RouteComponentProps) => <HomePage />;
 const Profile = (props: RouteComponentProps) => <ProfilePage />;

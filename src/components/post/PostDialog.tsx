@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 import LikeButton from "./LikeButton";
 
 import { connect } from "react-redux";
-import { getPost } from "../redux/actions/dataActions";
+import { getPost } from "../../redux/actions/dataActions";
 
 class PostDialog extends Component<any, any> {
   state = {

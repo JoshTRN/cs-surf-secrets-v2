@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import { connect } from "react-redux";
-import { createPost, clearErrors } from "../redux/actions/dataActions";
+import { createPost, clearErrors } from "../../redux/actions/dataActions";
 
 interface State {
   open: any;

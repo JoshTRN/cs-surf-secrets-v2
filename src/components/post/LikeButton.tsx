@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { likePost, unlikePost } from "../redux/actions/dataActions";
+import { likePost, unlikePost } from "../../redux/actions/dataActions";
 
 export class LikeButton extends Component<any, any> {
   likedPost = () => {

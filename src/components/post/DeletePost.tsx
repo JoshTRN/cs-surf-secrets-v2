@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import { connect } from "react-redux";
-import { deletePost } from "../redux/actions/dataActions";
+import { deletePost } from "../../redux/actions/dataActions";
 
 class DeletePost extends Component<any, any> {
   deletePost = () => {

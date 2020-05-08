@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import { connect } from "react-redux";
 import { logoutUser, uploadImage } from "../redux/actions/userActions";
 
-import EditDetails from "../components/EditDetails";
+import EditDetails from "../components/profile/EditDetails";
 class Profile extends Component<any, any> {
   handleImageChange = (event: any) => {
     const image = event.target.files[0];

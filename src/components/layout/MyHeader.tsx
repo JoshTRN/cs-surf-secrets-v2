@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 import { connect } from "react-redux";
 
-import logo from "../Assets/images/surfsecrets_logo.png";
+import logo from "../../Assets/images/surfsecrets_logo.png";
 
 class MyHeader extends Component<any, any> {
   constructor(props: any) {

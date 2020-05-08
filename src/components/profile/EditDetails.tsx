@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import { connect } from "react-redux";
-import { editUserDetails } from "../redux/actions/userActions";
+import { editUserDetails } from "../../redux/actions/userActions";
 
 export class EditDetails extends Component<any, any> {
   state = {
