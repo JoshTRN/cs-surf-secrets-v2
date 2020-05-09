@@ -11,6 +11,8 @@ import { getPost, clearErrors } from "../../redux/actions/dataActions";
 class PostDialog extends Component<any, any> {
   state = {
     open: false,
+    oldPath: "",
+    newPath: "",
   };
 
   componentDidMount() {
@@ -20,11 +22,19 @@ class PostDialog extends Component<any, any> {
   }
 
   handleOpen = () => {
-    this.setState({ open: true });
+    let oldPath = window.location.pathname;
+
+    const { userHandle, postId } = this.props;
+    const newPath = `/users/${userHandle}/post/${postId}`;
+
+    window.history.pushState(null, "Surf Secrets Post", newPath);
+
+    this.setState({ open: true, oldPath, newPath });
     this.props.getPost(this.props.postId);
   };
 
   handleClose = () => {
+    window.history.pushState(null, "Surf Secrets", this.state.oldPath);
     this.setState({ open: false });
     this.props.clearErrors();
   };
