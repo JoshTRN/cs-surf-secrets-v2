@@ -4,6 +4,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import DeletePost from "./DeletePost";
 import PostDialog from "./PostDialog";
 import LikeButton from "./LikeButton";
+import { Link } from "@reach/router";
 
 import { connect } from "react-redux";
 
@@ -41,7 +42,7 @@ class Post extends Component<any, any> {
             alt={`${userHandle}`}
           />
         </div>
-        <h4>{userHandle}</h4>
+        <Link to={`/users/${userHandle}`}>{userHandle}</Link>
         {deleteButton}
         <p>{dayjs(createdAt).fromNow()}</p>
         <p>{body}</p>

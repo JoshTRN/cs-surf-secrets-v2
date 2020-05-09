@@ -12,6 +12,7 @@ import HomePage from "./pages/Home";
 import SignupPage from "./pages/Signup";
 import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
+import UserPage from "./pages/User";
 import { List } from "./components/List";
 
 import MyHeader from "./components/layout/MyHeader";
@@ -21,7 +22,7 @@ const Home = (props: RouteComponentProps) => <HomePage />;
 const Profile = (props: RouteComponentProps) => <ProfilePage />;
 const Signup = (props: RouteComponentProps) => <SignupPage />;
 const Login = (props: RouteComponentProps) => <LoginPage />;
-
+const User = (props: RouteComponentProps) => <UserPage />;
 // conditional Routing TODO
 const token = localStorage.FBIdToken;
 if (token) {
@@ -48,6 +49,7 @@ class App extends Component<any, any> {
             <Profile path="profile" />
             <Signup path="signup" />
             <Login path="login" />
+            <User path="users/:handle" />
           </Router>
           <br />
           <List />
