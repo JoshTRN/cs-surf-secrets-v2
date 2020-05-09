@@ -50,7 +50,11 @@ class Post extends Component<any, any> {
         <span>{likeCount} Likes</span>
         <br />
         <span>{commentCount} Comments</span>
-        <PostDialog postId={postId} userHandle={userHandle} />
+        <PostDialog
+          postId={postId}
+          userHandle={userHandle}
+          openDialog={this.props.openDialog}
+        />
       </div>
     );
   }

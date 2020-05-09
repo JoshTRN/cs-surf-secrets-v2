@@ -50,6 +50,7 @@ class App extends Component<any, any> {
             <Signup path="signup" />
             <Login path="login" />
             <User path="users/:handle" />
+            <User path="users/:handle/post/:postId" />
           </Router>
           <br />
           <List />

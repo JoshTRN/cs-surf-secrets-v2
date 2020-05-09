@@ -13,6 +13,12 @@ class PostDialog extends Component<any, any> {
     open: false,
   };
 
+  componentDidMount() {
+    if (this.props.openDialog) {
+      this.handleOpen();
+    }
+  }
+
   handleOpen = () => {
     this.setState({ open: true });
     this.props.getPost(this.props.postId);
