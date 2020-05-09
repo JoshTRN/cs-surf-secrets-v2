@@ -3,9 +3,10 @@ import dayjs from "dayjs";
 import { Link } from "@reach/router";
 import LikeButton from "./LikeButton";
 import Comments from "./Comments";
+import CommentForm from "./CommentForm";
 
 import { connect } from "react-redux";
-import { getPost } from "../../redux/actions/dataActions";
+import { getPost, clearErrors } from "../../redux/actions/dataActions";
 
 class PostDialog extends Component<any, any> {
   state = {
@@ -19,6 +20,7 @@ class PostDialog extends Component<any, any> {
 
   handleClose = () => {
     this.setState({ open: false });
+    this.props.clearErrors();
   };
 
   render() {
@@ -64,6 +66,7 @@ class PostDialog extends Component<any, any> {
         <br />
         <span>{commentCount} Comments</span>
         <hr />
+        <CommentForm postId={postId} />
         <Comments comments={comments} />
       </div>
     );
@@ -93,4 +96,4 @@ const mapStateToProps = (state: any) => ({
   UI: state.UI,
 });
 
-export default connect(mapStateToProps, { getPost })(PostDialog);
+export default connect(mapStateToProps, { getPost, clearErrors })(PostDialog);
