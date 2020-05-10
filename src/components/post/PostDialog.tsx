@@ -27,6 +27,8 @@ class PostDialog extends Component<any, any> {
     const { userHandle, postId } = this.props;
     const newPath = `/users/${userHandle}/post/${postId}`;
 
+    if (oldPath === newPath) oldPath = `/users/${userHandle}`;
+
     window.history.pushState(null, "Surf Secrets Post", newPath);
 
     this.setState({ open: true, oldPath, newPath });
