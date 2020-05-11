@@ -4,6 +4,7 @@ import Post from "../components/post/Post";
 import { connect } from "react-redux";
 import { getPosts } from "../redux/actions/dataActions";
 
+import Hero from "../Assets/images/csgo-hero1.jpg";
 class HomePage extends Component<any, any> {
   componentDidMount() {
     this.props.getPosts();
@@ -18,8 +19,13 @@ class HomePage extends Component<any, any> {
     );
     return (
       <div>
-        <h1>Posts</h1>
-        <h2>{recentPostsMarkup}</h2>
+        <div className="hero-container">
+          <img className="hero-image" src={Hero} />
+        </div>
+        <div>
+          <h1>Posts</h1>
+          <h2>{recentPostsMarkup}</h2>
+        </div>
       </div>
     );
   }

@@ -13,6 +13,7 @@
 /* fonts/decorations */
 .header {
   background: #202020;
+  border-bottom: 1px solid #29aae1;
 }
 
 .logo {
@@ -20,7 +21,6 @@
 }
 
 .button {
-  background: #ea8023;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -36,7 +36,6 @@
 
 .nav-link {
   display: inline-block;
-  background: #ea8023;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -58,5 +57,19 @@
   background: grey;
   width: 50%;
   margin: 0 auto;
+}
+
+.hero-container {
+  background-image: url("../Assets/images/csgo-hero1.jpg");
+  width: 100vw;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image {
+  display: none;
+  margin: 0 auto;
+  width: 200vw;
 }
 /*# sourceMappingURL=main.css.map */
