@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Post from "../components/post/Post";
+import CreatePost from "../components/post/CreatePost";
 
 import { connect } from "react-redux";
 import { getPosts } from "../redux/actions/dataActions";
@@ -12,6 +13,7 @@ class HomePage extends Component<any, any> {
 
   render() {
     const { posts, loading } = this.props.data;
+    const { authenticated } = this.props;
     let recentPostsMarkup = !loading ? (
       posts.map((post: any) => <Post key={post.postId} post={post} />)
     ) : (
@@ -24,6 +26,8 @@ class HomePage extends Component<any, any> {
         </div>
         <div className="home">
           <h1>Posts</h1>
+          {authenticated ? <CreatePost /> : null}
+
           <h2>{recentPostsMarkup}</h2>
         </div>
       </div>
@@ -33,6 +37,7 @@ class HomePage extends Component<any, any> {
 
 const mapStateToProps = (state: any) => ({
   data: state.data,
+  authenticated: state.user.authenticated,
 });
 
 export default connect(mapStateToProps, { getPosts })(HomePage);

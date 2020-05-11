@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Link } from "@reach/router";
 
 import Notifications from "./Notifications";
-import CreatePost from "../post/CreatePost";
 
 import { connect } from "react-redux";
 
@@ -21,7 +20,6 @@ class MyNav extends Component<any, any> {
                 PROFILE
               </Link>
               <Notifications />
-              <CreatePost />
             </ul>
           </Fragment>
         ) : (

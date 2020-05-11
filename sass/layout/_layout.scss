@@ -25,14 +25,15 @@ h4 {
 }
 
 .button {
-  background: #202020;
+  display: inline-block;
   font-weight: 600;
   padding: 6px;
-  color: white;
-  border: none;
+  color: #202020;
   border-radius: 3px;
   margin: 4px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .nav {
@@ -44,6 +45,20 @@ h4 {
   font-weight: 600;
   padding: 6px;
   color: white;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-button {
+  background: #202020;
+  display: inline-block;
+  font-weight: 600;
+  padding: 6px;
+  color: white;
+  border: none;
   border-radius: 3px;
   margin: 4px;
   cursor: pointer;

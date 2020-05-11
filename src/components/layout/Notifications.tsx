@@ -57,11 +57,11 @@ class Notifications extends Component<any, any> {
 
     return (
       <Fragment>
-        <button className='button' onClick={this.handleOpen}>
+        <button className="nav-button" onClick={this.handleOpen}>
           {notifications.filter((not: any) => not.read === false).length}
         </button>
         {this.state.open ? (
-          <button className='button' onClick={this.handleClose}>
+          <button className="button" onClick={this.handleClose}>
             CLOSE
           </button>
         ) : null}
