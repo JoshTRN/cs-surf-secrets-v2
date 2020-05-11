@@ -98,11 +98,14 @@ class SignupPage extends Component<any, any> {
           </div>
           {errors.general && <p>{errors.general}</p>}
           <button className="button" type="submit">
-            Signup
+            SIGNUP
           </button>
           <br />
           <small>
-            Already have an account? Login <Link to="/login">Here</Link>
+            Already have an account? Login{" "}
+            <Link className="text-link" to="/login">
+              Here
+            </Link>
           </small>
         </form>
       </div>

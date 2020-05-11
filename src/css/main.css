@@ -5,12 +5,21 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background: #202020;
+}
+
 /* display type */
 /* sizing */
 /* positioning */
 /* box model */
 /* colors */
 /* fonts/decorations */
+h4 {
+  padding: 15px;
+}
+
 .header {
   background: #202020;
   border-bottom: 1px solid #29aae1;
@@ -47,17 +56,49 @@
   font-size: 14px;
 }
 
+.text-link {
+  color: white;
+}
+
 .signup {
-  background: #303030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #202020;
   color: white;
   text-align: center;
+  padding: 10px;
+  height: 500px;
 }
 
 .signup-form {
   padding: 30px;
-  background: grey;
-  width: 50%;
+  background: #303030;
+  width: 70%;
   margin: 0 auto;
+  border-radius: 4px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.input {
+  padding: 4px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 80%;
 }
 
 .home {

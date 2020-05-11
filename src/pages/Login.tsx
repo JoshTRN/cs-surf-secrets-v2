@@ -42,7 +42,7 @@ class LoginPage extends Component<any, any> {
         <h4>Login</h4>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
           <div>
-            <label>Email Address</label>
+            <label className="label">Email Address</label>
             <input
               className="input"
               id="email"
@@ -71,7 +71,10 @@ class LoginPage extends Component<any, any> {
           </button>
           <br />
           <small>
-            Don't have an account? sign up <Link to="/signup">Here</Link>
+            Don't have an account? sign up{" "}
+            <Link className="text-link" to="/signup">
+              Here
+            </Link>
           </small>
         </form>
       </div>
