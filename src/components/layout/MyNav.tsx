@@ -10,24 +10,24 @@ class MyNav extends Component<any, any> {
   render() {
     const { authenticated } = this.props;
     return (
-      <div className='nav'>
+      <div className="nav">
         {authenticated ? (
           <Fragment>
             <ul>
-              <Link to='/' className='nav-link'>
+              <Link to="/" className="nav-link">
                 HOME
               </Link>
-              <Link to='profile' className='nav-link'>
+              <Link to="profile" className="nav-link">
                 PROFILE
               </Link>
-              <CreatePost />
               <Notifications />
+              <CreatePost />
             </ul>
           </Fragment>
         ) : (
           <Fragment>
             <ul>
-              <Link to='/' className='nav-link'>
+              <Link to="/" className="nav-link">
                 HOME
               </Link>
             </ul>

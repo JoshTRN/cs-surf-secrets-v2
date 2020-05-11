@@ -58,7 +58,7 @@ class CreatePost extends Component<any, any> {
     } = this.props;
     return (
       <Fragment>
-        <button className="button" onClick={this.handleOpen}>
+        <button className="nav-button" onClick={this.handleOpen}>
           CREATE POST
         </button>
         <div style={this.state.open ? trueOpen : falseOpen}>

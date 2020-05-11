@@ -13,10 +13,10 @@ import SignupPage from "./pages/Signup";
 import ProfilePage from "./pages/Profile";
 import LoginPage from "./pages/Login";
 import UserPage from "./pages/User";
-import { List } from "./components/List";
 
 import MyHeader from "./components/layout/MyHeader";
 import MyNav from "./components/layout/MyNav";
+import Footer from "./components/layout/MyFooter";
 
 const Home = (props: RouteComponentProps) => <HomePage />;
 const Profile = (props: RouteComponentProps) => <ProfilePage />;
@@ -52,8 +52,7 @@ class App extends Component<any, any> {
             <User path="users/:handle" />
             <User path="users/:handle/post/:postId" />
           </Router>
-          <br />
-          <List />
+          <Footer />
         </div>
       </Provider>
     );

@@ -33,23 +33,26 @@ class Post extends Component<any, any> {
       ) : null;
 
     return (
-      <div className="posts">
-        <div className="posts">
+      <div className="post">
+        <div className="post-user">
           <img
+            className="post-user-image"
             height="50px"
             width="50px"
             src={`${userImage}`}
             alt={`${userHandle}`}
           />
+          <Link className="nav-link" to={`/users/${userHandle}`}>
+            {userHandle}
+          </Link>
         </div>
-        <Link to={`/users/${userHandle}`}>{userHandle}</Link>
+
         {deleteButton}
-        <p>{dayjs(createdAt).fromNow()}</p>
-        <p>{body}</p>
+        <p className="caption">{dayjs(createdAt).fromNow()}</p>
+        <p className="font1">{body}</p>
         <LikeButton postId={postId} />
-        <span>{likeCount} Likes</span>
-        <br />
-        <span>{commentCount} Comments</span>
+        <span className="caption">{likeCount} Likes </span>
+        <span className="caption">{commentCount} Comments </span>
         <PostDialog
           postId={postId}
           userHandle={userHandle}

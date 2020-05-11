@@ -21,6 +21,7 @@
 }
 
 .button {
+  background: #202020;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -57,6 +58,55 @@
   background: grey;
   width: 50%;
   margin: 0 auto;
+}
+
+.home {
+  background: #202020;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.post-user-image {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.footer {
+  background: #202020;
+  color: white;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.inline {
+  display: inline;
 }
 
 .hero-container {

@@ -21,6 +21,7 @@
 }
 
 .button {
+  background: #202020;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -57,4 +58,38 @@
     width: 50%;
     margin: 0 auto;
   }
+}
+
+.home {
+  background: #202020;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  &-image {
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+}
+
+.footer {
+  background: #202020;
+  color: white;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.inline {
+  display: inline;
 }
