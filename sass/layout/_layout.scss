@@ -111,6 +111,12 @@ label {
   flex-direction: column;
 }
 
+.post {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
 .post-user {
   display: flex;
   justify-content: space-between;
@@ -121,6 +127,10 @@ label {
     border: 1px solid white;
     border-radius: 3px;
   }
+}
+
+.post-container {
+  max-width: 80%;
 }
 
 .footer {

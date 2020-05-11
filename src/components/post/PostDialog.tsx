@@ -68,22 +68,29 @@ class PostDialog extends Component<any, any> {
       <p>Loading...</p>
     ) : (
       <div>
-        <img
-          height="50px"
-          width="50px"
-          src={`${userImage}`}
-          alt={`${userHandle} Profile`}
-        />
-        <Link to={`/users/${userHandle}`}>{userHandle}</Link>
-        <hr />
-        <p>{dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}</p>
-        <hr />
-        <p>{body}</p>
+        <div className="post-user">
+          <img
+            className="post-user-image"
+            height="50px"
+            width="50px"
+            src={`${userImage}`}
+            alt={`${userHandle} Profile`}
+          />
+          <Link className="nav-link" to={`/users/${userHandle}`}>
+            {userHandle}
+          </Link>
+        </div>
+
+        <p className="caption">
+          {dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
+        </p>
+
+        <p className="font1">{body}</p>
         <LikeButton postId={postId} />
-        <span>{likeCount} likes</span>
+        <span className="caption">{likeCount} likes</span>
         <br />
-        <span>{commentCount} Comments</span>
-        <hr />
+        <span className="caption">{commentCount} Comments</span>
+
         <CommentForm postId={postId} />
         <Comments comments={comments} />
       </div>
@@ -95,7 +102,7 @@ class PostDialog extends Component<any, any> {
           EXPAND POST
         </button>
         {this.state.open ? (
-          <div style={this.state.open ? trueOpen : falseOpen}>
+          <div className="post" style={this.state.open ? trueOpen : falseOpen}>
             <button className="button" onClick={this.handleClose}>
               Cancel
             </button>

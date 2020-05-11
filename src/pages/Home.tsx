@@ -28,7 +28,7 @@ class HomePage extends Component<any, any> {
           <h1>Posts</h1>
           {authenticated ? <CreatePost /> : null}
 
-          <h2>{recentPostsMarkup}</h2>
+          <div className="post-container">{recentPostsMarkup}</div>
         </div>
       </div>
     );
