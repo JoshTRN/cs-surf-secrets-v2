@@ -41,7 +41,7 @@ class LoginPage extends Component<any, any> {
       <div className="signup">
         <h4>Login</h4>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
-          <div>
+          <div className="entry">
             <label className="label">Email Address</label>
             <input
               className="input"
@@ -53,7 +53,7 @@ class LoginPage extends Component<any, any> {
             />
             {errors.email && <p>{errors.email}</p>}
           </div>
-          <div>
+          <div className="entry">
             <label>Password</label>
             <input
               className="input"

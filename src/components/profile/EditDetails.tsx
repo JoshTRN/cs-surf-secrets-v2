@@ -66,7 +66,7 @@ export class EditDetails extends Component<any, any> {
         </button>
         <div style={this.state.open ? trueOpen : falseOpen}>
           <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
-            <div>
+            <div className="entry">
               <label>Bio</label>
               <input
                 className="input"
@@ -77,7 +77,7 @@ export class EditDetails extends Component<any, any> {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
+            <div className="entry">
               <label>Steam</label>
               <input
                 className="input"
@@ -88,7 +88,7 @@ export class EditDetails extends Component<any, any> {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
+            <div className="entry">
               <label>Location</label>
               <input
                 className="input"

@@ -48,7 +48,7 @@ class SignupPage extends Component<any, any> {
       <div className="signup">
         <h4>Signup</h4>
         <form noValidate className="signup-form" onSubmit={this.handleSubmit}>
-          <div>
+          <div className="entry">
             <label>Email Address</label>
             <input
               className="input"
@@ -60,7 +60,7 @@ class SignupPage extends Component<any, any> {
             />
             {errors.email && <p>{errors.email}</p>}
           </div>
-          <div>
+          <div className="entry">
             <label>Password</label>
             <input
               className="input"
@@ -72,7 +72,7 @@ class SignupPage extends Component<any, any> {
             />
             {errors.password && <p>{errors.password}</p>}
           </div>
-          <div>
+          <div className="entry">
             <label>Confirm Password</label>
             <input
               className="input"
@@ -84,7 +84,7 @@ class SignupPage extends Component<any, any> {
             />
             {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
           </div>
-          <div>
+          <div className="entry">
             <label>Username</label>
             <input
               className="input"
