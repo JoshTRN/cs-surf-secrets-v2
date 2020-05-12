@@ -29,26 +29,39 @@ class Profile extends Component<any, any> {
 
     let profileMarkup = !loading ? (
       authenticated ? (
-        <div>
-          <div className="profile-image">
-            <img height="50px" width="50px" src={`${imageUrl}`} alt="profile" />
+        <div className="profile">
+          <div className="profile-image-container">
+            <img
+              className="user-image"
+              height="100px"
+              width="100px"
+              src={`${imageUrl}`}
+              alt="profile"
+            />
+            <Link className="nav-link" to={`users/${handle}`}>
+              {handle}
+            </Link>
+            {location && <p className="caption">{location}</p>}
+          </div>
+          <div className="user-details">
             <input
               type="file"
               id="imageInput"
               onChange={this.handleImageChange}
             />
+
+            <p className="caption">
+              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+            </p>
           </div>
-          <hr />
+
           <div className="profile-details">
-            <Link to={`users/${handle}`}>{handle}</Link>
-            <hr />
-            {bio && <p>{bio}</p>}
-            <hr />
-            {location && <p>{location}</p>}
-            <hr />
-            {steam && <p>{steam}</p>}
-            <hr />
-            <p>{dayjs(createdAt).format("MMM YYYY")}</p>
+            <div className="bio-details">
+              <h3>Bio</h3>
+              {bio && <p>{bio}</p>}
+            </div>
+
+            {steam && <button className="button">STEAM</button>}
           </div>
           <button className="button" onClick={this.handleLogout}>
             LOGOUT
