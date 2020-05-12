@@ -258,6 +258,19 @@ label {
   margin: 10px;
 }
 
+.user {
+  color: white;
+}
+
+.notifications {
+  float: right;
+  color: white;
+}
+
+.notification-markup {
+  background: #202020;
+}
+
 .hero-container {
   background-image: url("../Assets/images/csgo-hero1.jpg");
   width: 100vw;

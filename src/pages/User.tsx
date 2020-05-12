@@ -53,7 +53,7 @@ class User extends Component<any, any> {
     );
 
     return (
-      <div>
+      <div className="user">
         <h1>Posts</h1>
         <h2>{postsMarkup}</h2>
         {this.state.profile === null ? (
