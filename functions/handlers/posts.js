@@ -1,25 +1,27 @@
 const { db } = require("../utility/admin");
 
-exports.getAllPosts = (req, res) => {
-  db.collection("posts")
-    .orderBy("createdAt", "desc")
-    .get()
-    .then((data) => {
-      let posts = [];
-      data.forEach((doc) => {
-        posts.push({
-          postId: doc.id,
-          body: doc.data().body,
-          userHandle: doc.data().userHandle,
-          createdAt: doc.data().createdAt,
-          commentCount: doc.data().commentCount,
-          likeCount: doc.data().likeCount,
-          userImage: doc.data().userImage,
-        });
+exports.getAllPosts = async (req, res) => {
+  try {
+    const data = await db
+      .collection("posts")
+      .orderBy("createdAt", "desc")
+      .get();
+    let posts = [];
+    data.forEach((doc) => {
+      posts.push({
+        postId: doc.id,
+        body: doc.data().body,
+        userHandle: doc.data().userHandle,
+        createdAt: doc.data().createdAt,
+        commentCount: doc.data().commentCount,
+        likeCount: doc.data().likeCount,
+        userImage: doc.data().userImage,
       });
-      return res.json(posts);
-    })
-    .catch((err) => console.log(err));
+    });
+    return res.json(posts);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 exports.postSinglePost = (req, res) => {
