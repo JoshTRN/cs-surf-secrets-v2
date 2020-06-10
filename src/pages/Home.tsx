@@ -1,60 +1,43 @@
 import React, { Component } from "react";
-import { fAuth, fDb } from "../config/fbConfig";
-import Posts from "../components/Posts";
+import Post from "../components/post/Post";
+import CreatePost from "../components/post/CreatePost";
 
+import { connect } from "react-redux";
+import { getPosts } from "../redux/actions/dataActions";
+
+import Hero from "../Assets/images/csgo-hero1.jpg";
 class HomePage extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      loggedIn: false,
-      data: [
-        {
-          title: "titeeel",
-          content: "coneetn",
-        },
-      ],
-    };
-  }
-
   componentDidMount() {
-    fDb
-      .collection("posts")
-      .get()
-      .then((snapshot) => {
-        const data = snapshot.docs.map((doc) => doc.data());
-        this.setState({
-          data: this.state.data.concat(data),
-        });
-      });
+    this.props.getPosts();
   }
-
-  authEvent = fAuth.onAuthStateChanged((user) => {
-    this.setState({
-      loggedIn: user ? true : false,
-    });
-  });
 
   render() {
-    if (this.state.loggedIn) {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
+    const { posts, loading } = this.props.data;
+    const { authenticated } = this.props;
+    let recentPostsMarkup = !loading ? (
+      posts.map((post: any) => <Post key={post.postId} post={post} />)
+    ) : (
+      <p>Loading...</p>
+    );
+    return (
+      <div>
+        <div className="hero-container">
+          <img className="hero-image" src={Hero} />
+        </div>
+        <div className="home">
           <h1>Posts</h1>
-          {this.state.data.map(({ title, content }: any) => (
-            <Posts key={title} title={title} content={content} />
-          ))}
+          {authenticated ? <CreatePost /> : null}
+
+          <div className="post-container">{recentPostsMarkup}</div>
         </div>
-      );
-    } else {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <h1>Login to see posts</h1>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
-export default HomePage;
+const mapStateToProps = (state: any) => ({
+  data: state.data,
+  authenticated: state.user.authenticated,
+});
+
+export default connect(mapStateToProps, { getPosts })(HomePage);

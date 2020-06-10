@@ -5,14 +5,24 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background: #202020;
+}
+
 /* display type */
 /* sizing */
 /* positioning */
 /* box model */
 /* colors */
 /* fonts/decorations */
+h4 {
+  padding: 15px;
+}
+
 .header {
   background: #202020;
+  border-bottom: 1px solid #29aae1;
 }
 
 .logo {
@@ -20,14 +30,15 @@
 }
 
 .button {
-  background: #ea8023;
+  display: inline-block;
   font-weight: 600;
   padding: 6px;
-  color: white;
-  border: none;
+  color: #202020;
   border-radius: 3px;
   margin: 4px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .nav {
@@ -36,7 +47,6 @@
 
 .nav-link {
   display: inline-block;
-  background: #ea8023;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -47,16 +57,231 @@
   font-size: 14px;
 }
 
+.nav-button {
+  background: #202020;
+  display: inline-block;
+  font-weight: 600;
+  padding: 6px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.text-link {
+  color: white;
+}
+
 .signup {
-  background: #303030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #202020;
   color: white;
   text-align: center;
+  padding: 10px;
+  height: 500px;
 }
 
 .signup-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 30px;
-  background: grey;
-  width: 50%;
+  background: #303030;
+  width: 70%;
   margin: 0 auto;
+  border-radius: 4px;
+}
+
+.entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+.input {
+  padding: 4px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 80%;
+}
+
+.home {
+  background: #202020;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.post-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.post-user-image {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.post-container {
+  max-width: 80%;
+}
+
+.footer {
+  background: #202020;
+  color: white;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.inline {
+  display: inline;
+}
+
+.profile {
+  color: white;
+}
+
+.profile-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.user-image {
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.bio-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid white;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.user {
+  color: white;
+}
+
+.notifications {
+  float: right;
+  color: white;
+}
+
+.notification-markup {
+  background: #202020;
+}
+
+.hero-container {
+  background-image: url("../Assets/images/csgo-hero1.jpg");
+  width: 100vw;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image {
+  display: none;
+  margin: 0 auto;
+  width: 200vw;
 }
 /*# sourceMappingURL=main.css.map */

@@ -11,8 +11,13 @@
 
 /* fonts/decorations */
 
+h4 {
+  padding: 15px;
+}
+
 .header {
   background: #202020;
+  border-bottom: 1px solid #29aae1;
 }
 
 .logo {
@@ -20,14 +25,15 @@
 }
 
 .button {
-  background: #ea8023;
+  display: inline-block;
   font-weight: 600;
   padding: 6px;
-  color: white;
-  border: none;
+  color: #202020;
   border-radius: 3px;
   margin: 4px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .nav {
@@ -36,7 +42,6 @@
 
 .nav-link {
   display: inline-block;
-  background: #ea8023;
   font-weight: 600;
   padding: 6px;
   color: white;
@@ -47,15 +52,156 @@
   font-size: 14px;
 }
 
+.nav-button {
+  background: #202020;
+  display: inline-block;
+  font-weight: 600;
+  padding: 6px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.text-link {
+  color: white;
+}
+
 .signup {
-  background: #303030;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #202020;
   color: white;
   text-align: center;
+  padding: 10px;
+  height: 500px;
 
   &-form {
+    flex-direction: column;
     padding: 30px;
-    background: grey;
-    width: 50%;
+    background: #303030;
+    width: 70%;
     margin: 0 auto;
+    border-radius: 4px;
   }
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+.input {
+  padding: 4px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 80%;
+}
+
+.home {
+  background: #202020;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.post-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  &-image {
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+}
+
+.post-container {
+  max-width: 80%;
+}
+
+.footer {
+  background: #202020;
+  color: white;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.inline {
+  display: inline;
+}
+
+.profile {
+  color: white;
+}
+
+.profile-image-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.user-image {
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-details {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.bio-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.user {
+  color: white;
+}
+
+.notifications {
+  float: right;
+  color: white;
+}
+
+.notification-markup {
+  background: #202020;
 }

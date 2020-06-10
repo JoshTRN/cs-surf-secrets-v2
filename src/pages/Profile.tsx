@@ -1,66 +1,91 @@
 import React, { Component } from "react";
-import { fAuth, fDb } from "../config/fbConfig";
+import { Link } from "@reach/router";
+import dayjs from "dayjs";
 
-const logo = require("./moon.PNG");
+import { connect } from "react-redux";
+import { logoutUser, uploadImage } from "../redux/actions/userActions";
 
-class ProfilePage extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
+import EditDetails from "../components/profile/EditDetails";
+class Profile extends Component<any, any> {
+  handleImageChange = (event: any) => {
+    const image = event.target.files[0];
+    const formData = new FormData();
+    formData.append("image", image, image.name);
+    this.props.uploadImage(formData);
+  };
 
-    this.state = {
-      loggedIn: false,
-    };
-  }
-
-  componentDidMount() {
-    fDb
-      .collection("users")
-      .get()
-      .then((snapshot) => {
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          this.setState({
-            username: data.username,
-          });
-        });
-
-        /* this.setState({
-          data: data[0],
-          /* this.state.data.concat(data), */
-        /* }); */
-      });
-  }
-
-  authEvent = fAuth.onAuthStateChanged((user) => {
-    this.setState({
-      loggedIn: user ? true : false,
-    });
-    this.setState({
-      email: user?.email,
-    });
-  });
+  handleLogout = (e: any) => {
+    this.props.logoutUser();
+  };
 
   render() {
-    if (this.state.loggedIn) {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <img src={logo} alt="logo" className="logo" />
-          <h1>{this.state.username}</h1>
-          <h4>Member Since</h4>
-          <h6>20 April 2020</h6>
-          <h4>Profile Views</h4>
-          <h6>238</h6>
+    const {
+      user: {
+        credentials: { handle, createdAt, imageUrl, bio, steam, location },
+        loading,
+        authenticated,
+      },
+    } = this.props;
+
+    let profileMarkup = !loading ? (
+      authenticated ? (
+        <div className="profile">
+          <div className="profile-image-container">
+            <img
+              className="user-image"
+              height="100px"
+              width="100px"
+              src={`${imageUrl}`}
+              alt="profile"
+            />
+            <Link className="nav-link" to={`users/${handle}`}>
+              {handle}
+            </Link>
+            {location && <p className="caption">{location}</p>}
+          </div>
+          <div className="user-details">
+            <input
+              type="file"
+              id="imageInput"
+              onChange={this.handleImageChange}
+            />
+
+            <p className="caption">
+              Member Since {dayjs(createdAt).format("DD MMM YYYY")}
+            </p>
+          </div>
+
+          <div className="profile-details">
+            <div className="bio-details">
+              <h3>Bio</h3>
+              {bio && <p>{bio}</p>}
+            </div>
+
+            {steam && <button className="button">STEAM</button>}
+          </div>
+          <button className="button" onClick={this.handleLogout}>
+            LOGOUT
+          </button>
+          <EditDetails />
         </div>
-      );
-    } else {
-      return (
-        <div>
-          {/* Conditional rendering when logged in/not */}
-          <h1>Login to see profile</h1>
-        </div>
-      );
-    }
+      ) : (
+        <p>No profile found, please login</p>
+      )
+    ) : (
+      <p>loading...</p>
+    );
+
+    return profileMarkup;
   }
 }
-export default ProfilePage;
+
+const mapStateToProps = (state: any) => ({
+  user: state.user,
+});
+
+const mapActionsToProps = {
+  logoutUser,
+  uploadImage,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Profile);
